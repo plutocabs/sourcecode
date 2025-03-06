@@ -1,0 +1,2632 @@
+{
+    "geocoded_waypoints": [
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJeWC5cZ5ZwokRZqOkLvneZzY",
+            "types": [
+                "establishment",
+                "health",
+                "point_of_interest"
+            ]
+        },
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJrVszaSRawokRHaXluw-uXOA",
+            "types": [
+                "premise"
+            ]
+        },
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJhW16Vt9YwokRxxCXcZh9Ols",
+            "types": [
+                "street_address"
+            ]
+        },
+        {
+            "geocoder_status": "OK",
+            "place_id": "ChIJQ2lga5JZwokRvOOpGH42VFI",
+            "types": [
+                "street_address"
+            ]
+        }
+    ],
+    "routes": [
+        {
+            "bounds": {
+                "northeast": {
+                    "lat": 40.75025840000001,
+                    "lng": -73.9510024
+                },
+                "southwest": {
+                    "lat": 40.7092125,
+                    "lng": -74.002772
+                }
+            },
+            "copyrights": "Map data \u00a92024 Google",
+            "legs": [
+                {
+                    "distance": {
+                        "text": "2.0 mi",
+                        "value": 3167
+                    },
+                    "duration": {
+                        "text": "15 mins",
+                        "value": 913
+                    },
+                    "end_address": "25 St James Pl, New York, NY 10038, USA",
+                    "end_location": {
+                        "lat": 40.71101549999999,
+                        "lng": -73.998409
+                    },
+                    "start_address": "204 2nd Ave, New York, NY 10003, USA",
+                    "start_location": {
+                        "lat": 40.7314021,
+                        "lng": -73.9848169
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "194 ft",
+                                "value": 59
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 16
+                            },
+                            "end_location": {
+                                "lat": 40.7316623,
+                                "lng": -73.9854223
+                            },
+                            "html_instructions": "Head <b>northwest<\/b> on <b>E 13th St<\/b> toward <b>2nd Ave<\/b>",
+                            "polyline": {
+                                "points": "gjrwFbdqbMABi@bBGN"
+                            },
+                            "start_location": {
+                                "lat": 40.7314021,
+                                "lng": -73.9848169
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.6 mi",
+                                "value": 1004
+                            },
+                            "duration": {
+                                "text": "4 mins",
+                                "value": 242
+                            },
+                            "end_location": {
+                                "lat": 40.7237415,
+                                "lng": -73.9910319
+                            },
+                            "html_instructions": "Turn <b>left<\/b> at the 1st cross street onto <b>2nd Ave<\/b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "{krwFzgqbMJHj@^PNNJVPJJJBLHLHfAt@PJPJ`@XbAr@RJlAx@RLPLl@^t@f@d@Zt@b@b@ZNJDB\\Tx@h@RLrA|@PL~@r@PJd@ZxBxAnAv@RN^TdAr@v@h@\\RRPZ?L?R@"
+                            },
+                            "start_location": {
+                                "lat": 40.7316623,
+                                "lng": -73.9854223
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 mi",
+                                "value": 440
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 110
+                            },
+                            "end_location": {
+                                "lat": 40.7200653,
+                                "lng": -73.99292419999999
+                            },
+                            "html_instructions": "Continue onto <b>Chrystie St<\/b>",
+                            "polyline": {
+                                "points": "kzpwF|jrbMVHH@D@PFb@P`@NbAb@f@RLDJLNHd@RvAl@vAj@fAb@r@XFBLFPJ`@Nj@V"
+                            },
+                            "start_location": {
+                                "lat": 40.7237415,
+                                "lng": -73.9910319
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "305 ft",
+                                "value": 93
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 29
+                            },
+                            "end_location": {
+                                "lat": 40.7203716,
+                                "lng": -73.99395009999999
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>Delancey St<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "mcpwFvvrbMKj@Kf@CNGVOl@?FGZ"
+                            },
+                            "start_location": {
+                                "lat": 40.7200653,
+                                "lng": -73.99292419999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.5 mi",
+                                "value": 774
+                            },
+                            "duration": {
+                                "text": "4 mins",
+                                "value": 210
+                            },
+                            "end_location": {
+                                "lat": 40.7141197,
+                                "lng": -73.9975497
+                            },
+                            "html_instructions": "Turn <b>left<\/b> onto <b>Bowery<\/b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "iepwFd}rbMEVRH`Cr@F@B@@@B?B@D@R?D@DB\\LZHrBl@n@Vx@ZTJNFJFXLDBb@RLHH@?@D@x@`@v@^h@XRJFVPJ@?XPB@r@\\j@Z^R@?NJ`@RNHJDh@^JFHFFBd@Z`An@"
+                            },
+                            "start_location": {
+                                "lat": 40.7203716,
+                                "lng": -73.99395009999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 mi",
+                                "value": 498
+                            },
+                            "duration": {
+                                "text": "3 mins",
+                                "value": 179
+                            },
+                            "end_location": {
+                                "lat": 40.7097777,
+                                "lng": -73.9963925
+                            },
+                            "html_instructions": "Turn <b>left<\/b> onto <b>Catherine St<\/b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "g~nwFtssbMHFHUDANG@?DA`@ITEVGfAS|@QbAODAz@OH?X?tB]tASxB]VErAW"
+                            },
+                            "start_location": {
+                                "lat": 40.7141197,
+                                "lng": -73.9975497
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 mi",
+                                "value": 299
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 127
+                            },
+                            "end_location": {
+                                "lat": 40.71101549999999,
+                                "lng": -73.998409
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>Catherine Slip<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "ccnwFllsbMTbC?FJlAH`A?FADAFAB?BCDCBEBC@WFWFYDgBZsAVE?"
+                            },
+                            "start_location": {
+                                "lat": 40.7097777,
+                                "lng": -73.9963925
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "6.1 mi",
+                        "value": 9779
+                    },
+                    "duration": {
+                        "text": "21 mins",
+                        "value": 1284
+                    },
+                    "end_address": "4400 Vernon Blvd, Long Island City, NY 11101, USA",
+                    "end_location": {
+                        "lat": 40.75025840000001,
+                        "lng": -73.9543264
+                    },
+                    "start_address": "25 St James Pl, New York, NY 10038, USA",
+                    "start_location": {
+                        "lat": 40.71101549999999,
+                        "lng": -73.998409
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "479 ft",
+                                "value": 146
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 50
+                            },
+                            "end_location": {
+                                "lat": 40.7113649,
+                                "lng": -73.99679189999999
+                            },
+                            "html_instructions": "Head <b>northeast<\/b> on <b>Catherine Slip<\/b>",
+                            "polyline": {
+                                "points": "{jnwF`ysbMEAAAECACCC?ECGAMAMEa@?II}@QqBEm@"
+                            },
+                            "start_location": {
+                                "lat": 40.71101549999999,
+                                "lng": -73.998409
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "433 ft",
+                                "value": 132
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 39
+                            },
+                            "end_location": {
+                                "lat": 40.7102005,
+                                "lng": -73.9965067
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>Catherine St<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "_mnwF|nsbMtASxB]VE"
+                            },
+                            "start_location": {
+                                "lat": 40.7113649,
+                                "lng": -73.99679189999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "367 ft",
+                                "value": 112
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 37
+                            },
+                            "end_location": {
+                                "lat": 40.7092125,
+                                "lng": -73.99624399999999
+                            },
+                            "html_instructions": "Continue onto <b>Catherine Slip<\/b>",
+                            "polyline": {
+                                "points": "wenwFdmsbMrAWDAPE`AOVE"
+                            },
+                            "start_location": {
+                                "lat": 40.7102005,
+                                "lng": -73.9965067
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 mi",
+                                "value": 1204
+                            },
+                            "duration": {
+                                "text": "3 mins",
+                                "value": 199
+                            },
+                            "end_location": {
+                                "lat": 40.7106997,
+                                "lng": -73.9822133
+                            },
+                            "html_instructions": "Turn <b>left<\/b> onto <b>South St<\/b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "q_nwFnksbMCYCa@Eo@Ea@YaD?CO}A?U@QCi@Em@G{@Ec@OiBOyAAIAOC[ASCW?IAMEo@I_AGk@SyC?W?MAKIaAGcAAOEm@I}AA[CWEm@Co@C]GiAEo@Ce@OoCEcAAS?OAK?O?M?I?I@G@K@K@GBI@EJW@w@Cs@Ag@Cg@CqAAWEm@AWCy@Ee@?A?A?AMS"
+                            },
+                            "start_location": {
+                                "lat": 40.7092125,
+                                "lng": -73.99624399999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "2.1 mi",
+                                "value": 3416
+                            },
+                            "duration": {
+                                "text": "3 mins",
+                                "value": 189
+                            },
+                            "end_location": {
+                                "lat": 40.7375572,
+                                "lng": -73.9742275
+                            },
+                            "html_instructions": "Merge onto <b>FDR Dr<\/b>",
+                            "maneuver": "merge",
+                            "polyline": {
+                                "points": "{hnwFxspbMCs@Cm@A_@Aa@KmDIcAAKAQEUCSESMk@EUOg@Qg@GMM[OWAEIMIOCCYa@EEQSOOIKYU_@Yc@WSIeCeAwB}@qAg@gAc@e@SCAKEECi@SOGQIq@Y]Mi@U{@_@i@UA?g@SQGe@Ok@Qa@MYGUGA?y@QA?SEUEUCSEWCSCWCMACA{@E_AGYCk@EWA_@CeAGe@E[Am@Ek@ESEc@CE?g@EUAUCQCA?UCSEKC[GUGQGUIMGUKg@WAAaAi@KGe@WMGwAu@_@UWMSMSK[QEAi@[QI[QGEAAOGOKGCYMKGg@UA?_@OWMSGSGCAOEWGSEWEUEg@Ek@Eg@Ea@EUAm@GG?]C]Cm@AU@K?K@UBSBUDUDSHYHA@[NYR]TC@QPIHKJYZm@z@GFYZIJKNCDIJIHKLOLMJUPUNOHYNo@RQFA?C?_@HC@]FA?i@HYDMBI@QDA?MB_@FYDWD_ANA@c@FUDA?KBe@FQDK@SDQBWDUDSBUDQDSBYDSDYDQDI@K@QBM?G@U@U?YAUCUCSCUEUGUISIKEIEAAOIQMSMGCm@a@"
+                            },
+                            "start_location": {
+                                "lat": 40.7106997,
+                                "lng": -73.9822133
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "210 ft",
+                                "value": 64
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 4
+                            },
+                            "end_location": {
+                                "lat": 40.7379915,
+                                "lng": -73.9737662
+                            },
+                            "html_instructions": "Take exit <b>8<\/b> toward <b>I-495<\/b>\/<wbr\/><b>E 34 St<\/b>\/<wbr\/><b>Midtown Tun<\/b>",
+                            "maneuver": "ramp-right",
+                            "polyline": {
+                                "points": "wpswF|aobMCWWQm@c@KM"
+                            },
+                            "start_location": {
+                                "lat": 40.7375572,
+                                "lng": -73.9742275
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "413 ft",
+                                "value": 126
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 9
+                            },
+                            "end_location": {
+                                "lat": 40.7389957,
+                                "lng": -73.9730718
+                            },
+                            "html_instructions": "Merge onto <b>FDR Dr<\/b>\/<wbr\/><b>Fdr Drive Service Rd E<\/b>",
+                            "maneuver": "merge",
+                            "polyline": {
+                                "points": "msswF`_obM[SwBuAu@a@"
+                            },
+                            "start_location": {
+                                "lat": 40.7379915,
+                                "lng": -73.9737662
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.3 mi",
+                                "value": 561
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 106
+                            },
+                            "end_location": {
+                                "lat": 40.7438369,
+                                "lng": -73.9716237
+                            },
+                            "html_instructions": "Keep <b>right<\/b> to stay on <b>FDR Dr<\/b>\/<wbr\/><b>Fdr Drive Service Rd E<\/b>",
+                            "maneuver": "keep-right",
+                            "polyline": {
+                                "points": "wyswFtznbM}@YICKCECe@MGAQEMEMCEAQCA?CAAAK?I?MAMEYGs@K[Cc@GkAOSCGAG?G@E@C@GBEDC@C@E@E?C?A?E?Q?WCQCOCGAUGSEWGUIOECAUIMIEASKUGmBiA"
+                            },
+                            "start_location": {
+                                "lat": 40.7389957,
+                                "lng": -73.9730718
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 mi",
+                                "value": 304
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 110
+                            },
+                            "end_location": {
+                                "lat": 40.7451996,
+                                "lng": -73.97474389999999
+                            },
+                            "html_instructions": "Turn <b>left<\/b> onto <b>E 35th St<\/b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "_xtwFrqnbMGJK\\M`@Qh@Qf@Qh@Qj@Qd@M^A@q@tBq@vBQh@MZ"
+                            },
+                            "start_location": {
+                                "lat": 40.7438369,
+                                "lng": -73.9716237
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "246 ft",
+                                "value": 75
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 25
+                            },
+                            "end_location": {
+                                "lat": 40.7457942,
+                                "lng": -73.97431929999999
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>Tunnel Approach St<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "o`uwFbeobMMIu@g@e@YCCGC"
+                            },
+                            "start_location": {
+                                "lat": 40.7451996,
+                                "lng": -73.97474389999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 165
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 31
+                            },
+                            "end_location": {
+                                "lat": 40.7456694,
+                                "lng": -73.9724727
+                            },
+                            "html_instructions": "Take the ramp to <b>I-495 E<\/b><div style=\"font-size:0.9em\">Toll road<\/div>",
+                            "polyline": {
+                                "points": "eduwFnbobMEIAC?AAO?ECK@I@G?C?CAKBK@GBG@GDKBKDQDOBMBGBK@I@G@I?I?I?MAO?IAKCU?EACAIAEAE"
+                            },
+                            "start_location": {
+                                "lat": 40.7457942,
+                                "lng": -73.97431929999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "1.2 mi",
+                                "value": 1978
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 91
+                            },
+                            "end_location": {
+                                "lat": 40.7413868,
+                                "lng": -73.9529744
+                            },
+                            "html_instructions": "Continue onto <b>Queens\u2013Midtown Tunl<\/b><div style=\"font-size:0.9em\">Toll road<\/div>",
+                            "polyline": {
+                                "points": "mcuwF|vnbMCMCMEOEOEMEOEM?AEMEGEGCCCAGGGGgAw@}@o@_@W]W_@WAAGGIIGI?AIKGMCGCEGMEOEQGWGUEUAECOCQAIAGAQAS?A?O?M?O?O@O?O?ABUBUBWDUDUFU?EFWDM?A@IHU@IFQFU@AHUHUJQFM@A@CR]Vc@n@eAVc@@?Tc@@?Ta@Vc@Vc@@?l@eAVc@Vc@Va@n@gAn@eAVc@Vc@vBoDVc@fAiBvBqDd@{@b@_AHQHSPa@L]F[Lw@RqA`A_GJ_AFi@@Gz@cIJ_AB_@@c@@c@?_AA_B?I?{@@Q?U@k@BeA"
+                            },
+                            "start_location": {
+                                "lat": 40.7456694,
+                                "lng": -73.9724727
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "89 ft",
+                                "value": 27
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 2
+                            },
+                            "end_location": {
+                                "lat": 40.7413619,
+                                "lng": -73.9526501
+                            },
+                            "html_instructions": "Continue onto <b>I-495 E<\/b><div style=\"font-size:0.9em\">Toll road<\/div>",
+                            "polyline": {
+                                "points": "uhtwF`}jbMD_A"
+                            },
+                            "start_location": {
+                                "lat": 40.7413868,
+                                "lng": -73.9529744
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "266 ft",
+                                "value": 81
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 12
+                            },
+                            "end_location": {
+                                "lat": 40.74087189999999,
+                                "lng": -73.9520823
+                            },
+                            "html_instructions": "Take exit <b>13<\/b> for <b>Borden Ave<\/b> toward <b>Pulaski Bridge<\/b>\/<wbr\/><b>Brooklyn<\/b>",
+                            "maneuver": "ramp-right",
+                            "polyline": {
+                                "points": "ohtwF`{jbMLUFQFYDMHQBG@A@A@A@AFAD?T@B?"
+                            },
+                            "start_location": {
+                                "lat": 40.7413619,
+                                "lng": -73.9526501
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 168
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 25
+                            },
+                            "end_location": {
+                                "lat": 40.741247,
+                                "lng": -73.954017
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>Borden Ave<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "metwFnwjbMGf@Iv@S~AAJIv@WtBAH"
+                            },
+                            "start_location": {
+                                "lat": 40.74087189999999,
+                                "lng": -73.9520823
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.6 mi",
+                                "value": 898
+                            },
+                            "duration": {
+                                "text": "4 mins",
+                                "value": 264
+                            },
+                            "end_location": {
+                                "lat": 40.7490503,
+                                "lng": -73.9522124
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>Vernon Blvd<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "ygtwFrckbMINCBAFCDCBEBE@]BUC}@SOEs@OMCE?EAC@E?C?WFE?G?SBuBg@eAWm@OWGi@MQEc@IQEWIgCk@kCm@QEcBc@QEc@MgBa@OEqAYSGSEWCOAOAI@eA@UA"
+                            },
+                            "start_location": {
+                                "lat": 40.741247,
+                                "lng": -73.954017
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 225
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 59
+                            },
+                            "end_location": {
+                                "lat": 40.7494685,
+                                "lng": -73.9548234
+                            },
+                            "html_instructions": "Turn <b>left<\/b> onto <b>44th Dr<\/b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "qxuwFhxjbMQjBO`B?RY~BKhAK|A"
+                            },
+                            "start_location": {
+                                "lat": 40.7490503,
+                                "lng": -73.9522124
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "318 ft",
+                                "value": 97
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 32
+                            },
+                            "end_location": {
+                                "lat": 40.75025840000001,
+                                "lng": -73.9543264
+                            },
+                            "html_instructions": "Turn <b>right<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "e{uwFrhkbM{Ay@aAg@"
+                            },
+                            "start_location": {
+                                "lat": 40.7494685,
+                                "lng": -73.9548234
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "5.0 mi",
+                        "value": 8034
+                    },
+                    "duration": {
+                        "text": "26 mins",
+                        "value": 1543
+                    },
+                    "end_address": "268 Of The Americas, New York, NY 10014, USA",
+                    "end_location": {
+                        "lat": 40.7291287,
+                        "lng": -74.0024625
+                    },
+                    "start_address": "4400 Vernon Blvd, Long Island City, NY 11101, USA",
+                    "start_location": {
+                        "lat": 40.75025840000001,
+                        "lng": -73.9543264
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "318 ft",
+                                "value": 97
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 32
+                            },
+                            "end_location": {
+                                "lat": 40.7494685,
+                                "lng": -73.9548234
+                            },
+                            "html_instructions": "Head <b>southwest<\/b> toward <b>44th Dr<\/b>",
+                            "polyline": {
+                                "points": "c`vwFpekbM`Af@zAx@"
+                            },
+                            "start_location": {
+                                "lat": 40.75025840000001,
+                                "lng": -73.9543264
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 225
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 77
+                            },
+                            "end_location": {
+                                "lat": 40.7490503,
+                                "lng": -73.9522124
+                            },
+                            "html_instructions": "Turn <b>left<\/b> onto <b>44th Dr<\/b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "e{uwFrhkbMJ}AJiAX_C?SNaBPkB"
+                            },
+                            "start_location": {
+                                "lat": 40.7494685,
+                                "lng": -73.9548234
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.4 mi",
+                                "value": 711
+                            },
+                            "duration": {
+                                "text": "3 mins",
+                                "value": 191
+                            },
+                            "end_location": {
+                                "lat": 40.74283459999999,
+                                "lng": -73.95407349999999
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>Vernon Blvd<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "qxuwFhxjbMT@dAAHAN@N@VBRDRFpAXNDfB`@b@LPDbBb@PDjCl@fCj@VHPDb@HPDh@LVFl@NdAVtBf@"
+                            },
+                            "start_location": {
+                                "lat": 40.7490503,
+                                "lng": -73.9522124
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 mi",
+                                "value": 343
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 124
+                            },
+                            "end_location": {
+                                "lat": 40.7417028,
+                                "lng": -73.9513727
+                            },
+                            "html_instructions": "Turn <b>left<\/b> onto <b>50th Ave<\/b><div style=\"font-size:0.9em\">Toll road<\/div>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "uqtwF|ckbMPJ@OD]J{@Jy@D]J_ADYPaBD_@Hm@LoABOBOBQBQBQ\\HNF@@@?BBDDBDLTDN"
+                            },
+                            "start_location": {
+                                "lat": 40.74283459999999,
+                                "lng": -73.95407349999999
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.1 mi",
+                                "value": 233
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 42
+                            },
+                            "end_location": {
+                                "lat": 40.7415551,
+                                "lng": -73.9540643
+                            },
+                            "html_instructions": "Keep <b>left<\/b>, follow signs for <b>Interstate 495 W<\/b> and merge onto <b>I-495 W<\/b><div style=\"font-size:0.9em\">Toll road<\/div>",
+                            "maneuver": "keep-left",
+                            "polyline": {
+                                "points": "sjtwF`sjbMFNDNBN@DBJDTBV@D@LH\\?NAJ?JAPE|@?HCj@Ap@AZ?n@Ab@?f@"
+                            },
+                            "start_location": {
+                                "lat": 40.7417028,
+                                "lng": -73.9513727
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "1.2 mi",
+                                "value": 1965
+                            },
+                            "duration": {
+                                "text": "2 mins",
+                                "value": 111
+                            },
+                            "end_location": {
+                                "lat": 40.7459595,
+                                "lng": -73.9731194
+                            },
+                            "html_instructions": "Continue onto <b>Queens\u2013Midtown Tunl<\/b><div style=\"font-size:0.9em\">Toll road<\/div>",
+                            "polyline": {
+                                "points": "witwFzckbM@`A?H?P?Z?B?PAb@Az@AXCVCTq@|FCR?@?@E^?@CJAREXIl@E`@Gh@AB?@Gf@O~@EVERObASdAOz@IXMf@AFMb@]t@q@pAu@jAw@fAyHpLW`@aBfC[b@U^A@W^?@q@dAW^A@W`@cBhCW`@SXCDA@GLKRKTKVGRGPCDGVEJCHGVGZEX?BE^Gb@ANAJAXAX?NAN?@?N@N@T@PDVDTBRBHDV@FDNHX@@FRFR@@FNJN@@HLHHFFBBNLHFBBZR\\T^V^T\\T?@^TDBJJHJHHJLHLHNHNDPDNBN@L@P@N?P?P?N?NAN"
+                            },
+                            "start_location": {
+                                "lat": 40.7415551,
+                                "lng": -73.9540643
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "338 ft",
+                                "value": 103
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 12
+                            },
+                            "end_location": {
+                                "lat": 40.7463507,
+                                "lng": -73.9742191
+                            },
+                            "html_instructions": "Continue onto <b>I-495 W<\/b>\/<wbr\/><b>Queens\u2013Midtown Tunl<\/b><div style=\"font-size:0.9em\">Toll road<\/div>",
+                            "polyline": {
+                                "points": "geuwF~znbMAJAP?FADCHEPADAFELYz@GRCDM`@"
+                            },
+                            "start_location": {
+                                "lat": 40.7459595,
+                                "lng": -73.9731194
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.2 mi",
+                                "value": 280
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 52
+                            },
+                            "end_location": {
+                                "lat": 40.7460394,
+                                "lng": -73.9767904
+                            },
+                            "html_instructions": "Take the <b>35 St<\/b> exit on the <b>left<\/b> toward <b>Downtown<\/b>\/<wbr\/><b>34 St<\/b>\/<wbr\/><b>2 Ave<\/b><div style=\"font-size:0.9em\">Toll road<\/div>",
+                            "maneuver": "ramp-left",
+                            "polyline": {
+                                "points": "uguwFzaobM@d@CFK^Yz@IVc@pAIXCHAJA@AF?J?H@J@J@H@F@@@FDHDHBF@@JLFFHDLH^V\\TVPFD"
+                            },
+                            "start_location": {
+                                "lat": 40.7463507,
+                                "lng": -73.9742191
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "440 ft",
+                                "value": 134
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 47
+                            },
+                            "end_location": {
+                                "lat": 40.7454708,
+                                "lng": -73.9753944
+                            },
+                            "html_instructions": "Turn <b>left<\/b> onto <b>E 35th St<\/b>",
+                            "maneuver": "turn-left",
+                            "polyline": {
+                                "points": "weuwF|qobMLc@`@oAFSFQFSHSNi@Nk@"
+                            },
+                            "start_location": {
+                                "lat": 40.7460394,
+                                "lng": -73.9767904
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "1.7 mi",
+                                "value": 2722
+                            },
+                            "duration": {
+                                "text": "9 mins",
+                                "value": 531
+                            },
+                            "end_location": {
+                                "lat": 40.7240538,
+                                "lng": -73.9910158
+                            },
+                            "html_instructions": "Turn <b>right<\/b> at the 1st cross street onto <b>2nd Ave<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "ebuwFdiobM|@j@|@l@JFXRl@`@LHDDRLTPLFj@`@r@d@JFJHdBdALHFF\\RJFXTHDNLNH~@n@RNh@^xBxAzBvA~@j@z@l@RLHFdAr@TNXPf@ZVPb@ZTNTNPLVNRLXPZTn@`@TNb@Xj@^NH\\TJFVPZRDBl@`@JFVNNJb@X^V`@TPL`BdAxA`AXRvBtA|BzAp@b@r@d@b@ZfBhAFDXNJHj@^PNNJVPJJJBLHLHfAt@PJPJ`@XbAr@RJlAx@RLPLl@^t@f@d@Zt@b@b@ZNJDB\\Tx@h@RLrA|@PL~@r@PJd@ZxBxAnAv@RN^TdAr@v@h@\\RRP"
+                            },
+                            "start_location": {
+                                "lat": 40.7454708,
+                                "lng": -73.9753944
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "0.7 mi",
+                                "value": 1100
+                            },
+                            "duration": {
+                                "text": "5 mins",
+                                "value": 292
+                            },
+                            "end_location": {
+                                "lat": 40.7282386,
+                                "lng": -74.0023736
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>E Houston St<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "i|pwFzjrbM@B@BDDDD`@XUdAKl@Qp@CPENERG`@IXMd@Ol@Ol@IZGX]rAM`@K`@GZK`@ELK`@GVIXAFADCLCNAL?BADG^Ib@EVM~@G`@CLIl@GXADENCHABELM\\Sd@MZENa@`AWp@GNGN[z@e@jAYr@]z@MZIRITWn@Yt@ITKTw@lBENGNu@nBMVITQ\\"
+                            },
+                            "start_location": {
+                                "lat": 40.7240538,
+                                "lng": -73.9910158
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "141 ft",
+                                "value": 43
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 16
+                            },
+                            "end_location": {
+                                "lat": 40.7284651,
+                                "lng": -74.002772
+                            },
+                            "html_instructions": "Slight <b>right<\/b> onto <b>W Houston St<\/b>",
+                            "maneuver": "turn-slight-right",
+                            "polyline": {
+                                "points": "ovqwFxqtbMEDC@CBABCBABITM`@"
+                            },
+                            "start_location": {
+                                "lat": 40.7282386,
+                                "lng": -74.0023736
+                            },
+                            "travel_mode": "DRIVING"
+                        },
+                        {
+                            "distance": {
+                                "text": "256 ft",
+                                "value": 78
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 16
+                            },
+                            "end_location": {
+                                "lat": 40.7291287,
+                                "lng": -74.0024625
+                            },
+                            "html_instructions": "Turn <b>right<\/b> onto <b>6th Ave<\/b>\/<wbr\/><b>Ave of the Americas<\/b>",
+                            "maneuver": "turn-right",
+                            "polyline": {
+                                "points": "}wqwFhttbMKEUIuAg@KE"
+                            },
+                            "start_location": {
+                                "lat": 40.7284651,
+                                "lng": -74.002772
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": [
+                    {
+                        "lat": 40.7314,
+                        "lng": -73.98482
+                    },
+                    {
+                        "lat": 40.73162000000001,
+                        "lng": -73.98534000000001
+                    },
+                    {
+                        "lat": 40.731660000000005,
+                        "lng": -73.98542
+                    },
+                    {
+                        "lat": 40.7316,
+                        "lng": -73.98547
+                    },
+                    {
+                        "lat": 40.73129,
+                        "lng": -73.98571000000001
+                    },
+                    {
+                        "lat": 40.73109,
+                        "lng": -73.98586
+                    },
+                    {
+                        "lat": 40.730830000000005,
+                        "lng": -73.98604
+                    },
+                    {
+                        "lat": 40.73012000000001,
+                        "lng": -73.98656000000001
+                    },
+                    {
+                        "lat": 40.72968,
+                        "lng": -73.98688
+                    },
+                    {
+                        "lat": 40.72919,
+                        "lng": -73.98724
+                    },
+                    {
+                        "lat": 40.728410000000004,
+                        "lng": -73.98781000000001
+                    },
+                    {
+                        "lat": 40.727850000000004,
+                        "lng": -73.98821000000001
+                    },
+                    {
+                        "lat": 40.726890000000004,
+                        "lng": -73.98891
+                    },
+                    {
+                        "lat": 40.726200000000006,
+                        "lng": -73.98944
+                    },
+                    {
+                        "lat": 40.72493,
+                        "lng": -73.99036000000001
+                    },
+                    {
+                        "lat": 40.724050000000005,
+                        "lng": -73.99102
+                    },
+                    {
+                        "lat": 40.72384,
+                        "lng": -73.99102
+                    },
+                    {
+                        "lat": 40.72374000000001,
+                        "lng": -73.99103000000001
+                    },
+                    {
+                        "lat": 40.723620000000004,
+                        "lng": -73.99108000000001
+                    },
+                    {
+                        "lat": 40.72354,
+                        "lng": -73.9911
+                    },
+                    {
+                        "lat": 40.72327000000001,
+                        "lng": -73.99123
+                    },
+                    {
+                        "lat": 40.72249,
+                        "lng": -73.99162000000001
+                    },
+                    {
+                        "lat": 40.72243,
+                        "lng": -73.99169
+                    },
+                    {
+                        "lat": 40.722350000000006,
+                        "lng": -73.99174000000001
+                    },
+                    {
+                        "lat": 40.721720000000005,
+                        "lng": -73.99207000000001
+                    },
+                    {
+                        "lat": 40.720620000000004,
+                        "lng": -73.99262
+                    },
+                    {
+                        "lat": 40.72007000000001,
+                        "lng": -73.99292000000001
+                    },
+                    {
+                        "lat": 40.72025,
+                        "lng": -73.99354000000001
+                    },
+                    {
+                        "lat": 40.720400000000005,
+                        "lng": -73.99407000000001
+                    },
+                    {
+                        "lat": 40.719590000000004,
+                        "lng": -73.99440000000001
+                    },
+                    {
+                        "lat": 40.71951000000001,
+                        "lng": -73.99443000000001
+                    },
+                    {
+                        "lat": 40.71938,
+                        "lng": -73.99444000000001
+                    },
+                    {
+                        "lat": 40.7192,
+                        "lng": -73.99453000000001
+                    },
+                    {
+                        "lat": 40.71848000000001,
+                        "lng": -73.99481
+                    },
+                    {
+                        "lat": 40.71795,
+                        "lng": -73.99507000000001
+                    },
+                    {
+                        "lat": 40.71757,
+                        "lng": -73.99528000000001
+                    },
+                    {
+                        "lat": 40.716640000000005,
+                        "lng": -73.99581
+                    },
+                    {
+                        "lat": 40.71643,
+                        "lng": -73.99594
+                    },
+                    {
+                        "lat": 40.716330000000006,
+                        "lng": -73.99600000000001
+                    },
+                    {
+                        "lat": 40.71629,
+                        "lng": -73.99612
+                    },
+                    {
+                        "lat": 40.716190000000005,
+                        "lng": -73.99618000000001
+                    },
+                    {
+                        "lat": 40.71604000000001,
+                        "lng": -73.99628000000001
+                    },
+                    {
+                        "lat": 40.715390000000006,
+                        "lng": -73.99667000000001
+                    },
+                    {
+                        "lat": 40.715,
+                        "lng": -73.99691
+                    },
+                    {
+                        "lat": 40.71464,
+                        "lng": -73.99717000000001
+                    },
+                    {
+                        "lat": 40.71412,
+                        "lng": -73.99755
+                    },
+                    {
+                        "lat": 40.71407000000001,
+                        "lng": -73.99759
+                    },
+                    {
+                        "lat": 40.714020000000005,
+                        "lng": -73.99748000000001
+                    },
+                    {
+                        "lat": 40.713910000000006,
+                        "lng": -73.99743000000001
+                    },
+                    {
+                        "lat": 40.71387,
+                        "lng": -73.99742
+                    },
+                    {
+                        "lat": 40.71311,
+                        "lng": -73.9972
+                    },
+                    {
+                        "lat": 40.71213,
+                        "lng": -73.99694000000001
+                    },
+                    {
+                        "lat": 40.71195,
+                        "lng": -73.99694000000001
+                    },
+                    {
+                        "lat": 40.710930000000005,
+                        "lng": -73.99669
+                    },
+                    {
+                        "lat": 40.7102,
+                        "lng": -73.99651
+                    },
+                    {
+                        "lat": 40.70978,
+                        "lng": -73.99639
+                    },
+                    {
+                        "lat": 40.70967,
+                        "lng": -73.99705
+                    },
+                    {
+                        "lat": 40.709610000000005,
+                        "lng": -73.99748000000001
+                    },
+                    {
+                        "lat": 40.70956,
+                        "lng": -73.99785
+                    },
+                    {
+                        "lat": 40.709590000000006,
+                        "lng": -73.99796
+                    },
+                    {
+                        "lat": 40.709680000000006,
+                        "lng": -73.99804
+                    },
+                    {
+                        "lat": 40.710570000000004,
+                        "lng": -73.99829000000001
+                    },
+                    {
+                        "lat": 40.711020000000005,
+                        "lng": -73.99841
+                    },
+                    {
+                        "lat": 40.71106,
+                        "lng": -73.99839
+                    },
+                    {
+                        "lat": 40.7111,
+                        "lng": -73.99835
+                    },
+                    {
+                        "lat": 40.71112,
+                        "lng": -73.9983
+                    },
+                    {
+                        "lat": 40.71119,
+                        "lng": -73.99795
+                    },
+                    {
+                        "lat": 40.711360000000006,
+                        "lng": -73.99679
+                    },
+                    {
+                        "lat": 40.70978,
+                        "lng": -73.99639
+                    },
+                    {
+                        "lat": 40.709210000000006,
+                        "lng": -73.99624
+                    },
+                    {
+                        "lat": 40.70931,
+                        "lng": -73.99553
+                    },
+                    {
+                        "lat": 40.70944,
+                        "lng": -73.99470000000001
+                    },
+                    {
+                        "lat": 40.709520000000005,
+                        "lng": -73.99412000000001
+                    },
+                    {
+                        "lat": 40.70953,
+                        "lng": -73.99382
+                    },
+                    {
+                        "lat": 40.7096,
+                        "lng": -73.99329
+                    },
+                    {
+                        "lat": 40.7098,
+                        "lng": -73.99208
+                    },
+                    {
+                        "lat": 40.709860000000006,
+                        "lng": -73.99164
+                    },
+                    {
+                        "lat": 40.709950000000006,
+                        "lng": -73.99096
+                    },
+                    {
+                        "lat": 40.71009,
+                        "lng": -73.98997
+                    },
+                    {
+                        "lat": 40.71009,
+                        "lng": -73.98978000000001
+                    },
+                    {
+                        "lat": 40.7102,
+                        "lng": -73.98897000000001
+                    },
+                    {
+                        "lat": 40.71031000000001,
+                        "lng": -73.98801
+                    },
+                    {
+                        "lat": 40.710420000000006,
+                        "lng": -73.98702
+                    },
+                    {
+                        "lat": 40.71058,
+                        "lng": -73.98553000000001
+                    },
+                    {
+                        "lat": 40.71060000000001,
+                        "lng": -73.98529
+                    },
+                    {
+                        "lat": 40.71060000000001,
+                        "lng": -73.98504000000001
+                    },
+                    {
+                        "lat": 40.71056,
+                        "lng": -73.98484
+                    },
+                    {
+                        "lat": 40.710530000000006,
+                        "lng": -73.98476000000001
+                    },
+                    {
+                        "lat": 40.71047,
+                        "lng": -73.98464000000001
+                    },
+                    {
+                        "lat": 40.710460000000005,
+                        "lng": -73.98436000000001
+                    },
+                    {
+                        "lat": 40.71049,
+                        "lng": -73.9839
+                    },
+                    {
+                        "lat": 40.710530000000006,
+                        "lng": -73.98329000000001
+                    },
+                    {
+                        "lat": 40.71060000000001,
+                        "lng": -73.98253000000001
+                    },
+                    {
+                        "lat": 40.71063,
+                        "lng": -73.98231000000001
+                    },
+                    {
+                        "lat": 40.7107,
+                        "lng": -73.98221000000001
+                    },
+                    {
+                        "lat": 40.71072,
+                        "lng": -73.98195000000001
+                    },
+                    {
+                        "lat": 40.710750000000004,
+                        "lng": -73.98156
+                    },
+                    {
+                        "lat": 40.710820000000005,
+                        "lng": -73.98052000000001
+                    },
+                    {
+                        "lat": 40.71088,
+                        "lng": -73.98012
+                    },
+                    {
+                        "lat": 40.71097,
+                        "lng": -73.97972
+                    },
+                    {
+                        "lat": 40.71107000000001,
+                        "lng": -73.97939000000001
+                    },
+                    {
+                        "lat": 40.711240000000004,
+                        "lng": -73.97899000000001
+                    },
+                    {
+                        "lat": 40.71144,
+                        "lng": -73.97863000000001
+                    },
+                    {
+                        "lat": 40.711690000000004,
+                        "lng": -73.97829
+                    },
+                    {
+                        "lat": 40.711940000000006,
+                        "lng": -73.97802
+                    },
+                    {
+                        "lat": 40.712230000000005,
+                        "lng": -73.97778000000001
+                    },
+                    {
+                        "lat": 40.71251,
+                        "lng": -73.97761000000001
+                    },
+                    {
+                        "lat": 40.71455,
+                        "lng": -73.97657000000001
+                    },
+                    {
+                        "lat": 40.71548000000001,
+                        "lng": -73.97609
+                    },
+                    {
+                        "lat": 40.716350000000006,
+                        "lng": -73.97564000000001
+                    },
+                    {
+                        "lat": 40.716840000000005,
+                        "lng": -73.97542
+                    },
+                    {
+                        "lat": 40.717470000000006,
+                        "lng": -73.97518000000001
+                    },
+                    {
+                        "lat": 40.71788,
+                        "lng": -73.97506
+                    },
+                    {
+                        "lat": 40.718630000000005,
+                        "lng": -73.9749
+                    },
+                    {
+                        "lat": 40.720420000000004,
+                        "lng": -73.97468
+                    },
+                    {
+                        "lat": 40.72079,
+                        "lng": -73.97464000000001
+                    },
+                    {
+                        "lat": 40.72111,
+                        "lng": -73.97458
+                    },
+                    {
+                        "lat": 40.721630000000005,
+                        "lng": -73.97452000000001
+                    },
+                    {
+                        "lat": 40.72195000000001,
+                        "lng": -73.97446000000001
+                    },
+                    {
+                        "lat": 40.72236,
+                        "lng": -73.97433000000001
+                    },
+                    {
+                        "lat": 40.72274,
+                        "lng": -73.97414
+                    },
+                    {
+                        "lat": 40.72334,
+                        "lng": -73.97376000000001
+                    },
+                    {
+                        "lat": 40.72466,
+                        "lng": -73.97293
+                    },
+                    {
+                        "lat": 40.72534,
+                        "lng": -73.97250000000001
+                    },
+                    {
+                        "lat": 40.725770000000004,
+                        "lng": -73.97226
+                    },
+                    {
+                        "lat": 40.72616,
+                        "lng": -73.97207
+                    },
+                    {
+                        "lat": 40.72648,
+                        "lng": -73.97195
+                    },
+                    {
+                        "lat": 40.7267,
+                        "lng": -73.97189
+                    },
+                    {
+                        "lat": 40.72701,
+                        "lng": -73.97183000000001
+                    },
+                    {
+                        "lat": 40.72771,
+                        "lng": -73.97173000000001
+                    },
+                    {
+                        "lat": 40.728280000000005,
+                        "lng": -73.97165000000001
+                    },
+                    {
+                        "lat": 40.72862000000001,
+                        "lng": -73.97165000000001
+                    },
+                    {
+                        "lat": 40.72874,
+                        "lng": -73.97166
+                    },
+                    {
+                        "lat": 40.72917,
+                        "lng": -73.97176
+                    },
+                    {
+                        "lat": 40.729400000000005,
+                        "lng": -73.97186
+                    },
+                    {
+                        "lat": 40.72955,
+                        "lng": -73.97195
+                    },
+                    {
+                        "lat": 40.729940000000006,
+                        "lng": -73.97226
+                    },
+                    {
+                        "lat": 40.730050000000006,
+                        "lng": -73.97237000000001
+                    },
+                    {
+                        "lat": 40.730410000000006,
+                        "lng": -73.97281000000001
+                    },
+                    {
+                        "lat": 40.73069,
+                        "lng": -73.97313000000001
+                    },
+                    {
+                        "lat": 40.73087,
+                        "lng": -73.97334000000001
+                    },
+                    {
+                        "lat": 40.73124000000001,
+                        "lng": -73.97364
+                    },
+                    {
+                        "lat": 40.73145,
+                        "lng": -73.97377
+                    },
+                    {
+                        "lat": 40.73178,
+                        "lng": -73.97391
+                    },
+                    {
+                        "lat": 40.73199,
+                        "lng": -73.97397000000001
+                    },
+                    {
+                        "lat": 40.732710000000004,
+                        "lng": -73.97415000000001
+                    },
+                    {
+                        "lat": 40.73453000000001,
+                        "lng": -73.97461000000001
+                    },
+                    {
+                        "lat": 40.735400000000006,
+                        "lng": -73.97483000000001
+                    },
+                    {
+                        "lat": 40.735690000000005,
+                        "lng": -73.9749
+                    },
+                    {
+                        "lat": 40.73602,
+                        "lng": -73.97492000000001
+                    },
+                    {
+                        "lat": 40.73626,
+                        "lng": -73.97489
+                    },
+                    {
+                        "lat": 40.736470000000004,
+                        "lng": -73.97485
+                    },
+                    {
+                        "lat": 40.73669,
+                        "lng": -73.97478000000001
+                    },
+                    {
+                        "lat": 40.736900000000006,
+                        "lng": -73.97468
+                    },
+                    {
+                        "lat": 40.737100000000005,
+                        "lng": -73.97456000000001
+                    },
+                    {
+                        "lat": 40.73756,
+                        "lng": -73.97423
+                    },
+                    {
+                        "lat": 40.73758,
+                        "lng": -73.97411000000001
+                    },
+                    {
+                        "lat": 40.737930000000006,
+                        "lng": -73.97384000000001
+                    },
+                    {
+                        "lat": 40.73799,
+                        "lng": -73.97377
+                    },
+                    {
+                        "lat": 40.738130000000005,
+                        "lng": -73.97367000000001
+                    },
+                    {
+                        "lat": 40.739000000000004,
+                        "lng": -73.97307
+                    },
+                    {
+                        "lat": 40.739360000000005,
+                        "lng": -73.97292
+                    },
+                    {
+                        "lat": 40.73968,
+                        "lng": -73.9728
+                    },
+                    {
+                        "lat": 40.74007,
+                        "lng": -73.97267000000001
+                    },
+                    {
+                        "lat": 40.74018,
+                        "lng": -73.97267000000001
+                    },
+                    {
+                        "lat": 40.740320000000004,
+                        "lng": -73.97263000000001
+                    },
+                    {
+                        "lat": 40.74071,
+                        "lng": -73.97253
+                    },
+                    {
+                        "lat": 40.74103,
+                        "lng": -73.97247
+                    },
+                    {
+                        "lat": 40.74159,
+                        "lng": -73.97236000000001
+                    },
+                    {
+                        "lat": 40.74166,
+                        "lng": -73.97238
+                    },
+                    {
+                        "lat": 40.74172,
+                        "lng": -73.97241000000001
+                    },
+                    {
+                        "lat": 40.741820000000004,
+                        "lng": -73.97247
+                    },
+                    {
+                        "lat": 40.741910000000004,
+                        "lng": -73.97247
+                    },
+                    {
+                        "lat": 40.74212,
+                        "lng": -73.97245000000001
+                    },
+                    {
+                        "lat": 40.742290000000004,
+                        "lng": -73.97241000000001
+                    },
+                    {
+                        "lat": 40.74266,
+                        "lng": -73.97229
+                    },
+                    {
+                        "lat": 40.74298,
+                        "lng": -73.97215
+                    },
+                    {
+                        "lat": 40.74329,
+                        "lng": -73.97199
+                    },
+                    {
+                        "lat": 40.743840000000006,
+                        "lng": -73.97162
+                    },
+                    {
+                        "lat": 40.743880000000004,
+                        "lng": -73.97168
+                    },
+                    {
+                        "lat": 40.74401,
+                        "lng": -73.97200000000001
+                    },
+                    {
+                        "lat": 40.74437,
+                        "lng": -73.97284
+                    },
+                    {
+                        "lat": 40.74479,
+                        "lng": -73.97379000000001
+                    },
+                    {
+                        "lat": 40.74513,
+                        "lng": -73.97460000000001
+                    },
+                    {
+                        "lat": 40.745200000000004,
+                        "lng": -73.97474000000001
+                    },
+                    {
+                        "lat": 40.745270000000005,
+                        "lng": -73.97469000000001
+                    },
+                    {
+                        "lat": 40.74573,
+                        "lng": -73.97436
+                    },
+                    {
+                        "lat": 40.74579000000001,
+                        "lng": -73.97432
+                    },
+                    {
+                        "lat": 40.74584,
+                        "lng": -73.97416000000001
+                    },
+                    {
+                        "lat": 40.74586,
+                        "lng": -73.97407000000001
+                    },
+                    {
+                        "lat": 40.74584,
+                        "lng": -73.97398000000001
+                    },
+                    {
+                        "lat": 40.74584,
+                        "lng": -73.97394000000001
+                    },
+                    {
+                        "lat": 40.745850000000004,
+                        "lng": -73.97388000000001
+                    },
+                    {
+                        "lat": 40.745830000000005,
+                        "lng": -73.97382
+                    },
+                    {
+                        "lat": 40.7458,
+                        "lng": -73.97374
+                    },
+                    {
+                        "lat": 40.745760000000004,
+                        "lng": -73.97364
+                    },
+                    {
+                        "lat": 40.74566,
+                        "lng": -73.97334000000001
+                    },
+                    {
+                        "lat": 40.745610000000006,
+                        "lng": -73.97319
+                    },
+                    {
+                        "lat": 40.74559,
+                        "lng": -73.973
+                    },
+                    {
+                        "lat": 40.7456,
+                        "lng": -73.9728
+                    },
+                    {
+                        "lat": 40.74564,
+                        "lng": -73.97258000000001
+                    },
+                    {
+                        "lat": 40.7458,
+                        "lng": -73.97210000000001
+                    },
+                    {
+                        "lat": 40.74589,
+                        "lng": -73.97187000000001
+                    },
+                    {
+                        "lat": 40.745990000000006,
+                        "lng": -73.97176
+                    },
+                    {
+                        "lat": 40.74721,
+                        "lng": -73.97080000000001
+                    },
+                    {
+                        "lat": 40.747350000000004,
+                        "lng": -73.97065
+                    },
+                    {
+                        "lat": 40.747460000000004,
+                        "lng": -73.97047
+                    },
+                    {
+                        "lat": 40.747580000000006,
+                        "lng": -73.9702
+                    },
+                    {
+                        "lat": 40.7477,
+                        "lng": -73.96983
+                    },
+                    {
+                        "lat": 40.74776000000001,
+                        "lng": -73.96957
+                    },
+                    {
+                        "lat": 40.747780000000006,
+                        "lng": -73.96929
+                    },
+                    {
+                        "lat": 40.74777,
+                        "lng": -73.96889
+                    },
+                    {
+                        "lat": 40.74768,
+                        "lng": -73.96844
+                    },
+                    {
+                        "lat": 40.74757,
+                        "lng": -73.96807000000001
+                    },
+                    {
+                        "lat": 40.74738000000001,
+                        "lng": -73.96757000000001
+                    },
+                    {
+                        "lat": 40.74728,
+                        "lng": -73.96735000000001
+                    },
+                    {
+                        "lat": 40.74718,
+                        "lng": -73.96719
+                    },
+                    {
+                        "lat": 40.74694,
+                        "lng": -73.96683
+                    },
+                    {
+                        "lat": 40.74622,
+                        "lng": -73.96577
+                    },
+                    {
+                        "lat": 40.743100000000005,
+                        "lng": -73.96116
+                    },
+                    {
+                        "lat": 40.742630000000005,
+                        "lng": -73.96035
+                    },
+                    {
+                        "lat": 40.742470000000004,
+                        "lng": -73.96003
+                    },
+                    {
+                        "lat": 40.742360000000005,
+                        "lng": -73.95961000000001
+                    },
+                    {
+                        "lat": 40.74193,
+                        "lng": -73.95792
+                    },
+                    {
+                        "lat": 40.74183,
+                        "lng": -73.95739
+                    },
+                    {
+                        "lat": 40.741440000000004,
+                        "lng": -73.95525
+                    },
+                    {
+                        "lat": 40.741420000000005,
+                        "lng": -73.95489
+                    },
+                    {
+                        "lat": 40.74143,
+                        "lng": -73.95409000000001
+                    },
+                    {
+                        "lat": 40.741420000000005,
+                        "lng": -73.95354
+                    },
+                    {
+                        "lat": 40.74139,
+                        "lng": -73.95297000000001
+                    },
+                    {
+                        "lat": 40.74136,
+                        "lng": -73.95265
+                    },
+                    {
+                        "lat": 40.741290000000006,
+                        "lng": -73.95254
+                    },
+                    {
+                        "lat": 40.74121,
+                        "lng": -73.95232
+                    },
+                    {
+                        "lat": 40.741130000000005,
+                        "lng": -73.95216
+                    },
+                    {
+                        "lat": 40.741080000000004,
+                        "lng": -73.95209000000001
+                    },
+                    {
+                        "lat": 40.74100000000001,
+                        "lng": -73.95207
+                    },
+                    {
+                        "lat": 40.74087,
+                        "lng": -73.95208000000001
+                    },
+                    {
+                        "lat": 40.74096,
+                        "lng": -73.95256
+                    },
+                    {
+                        "lat": 40.741240000000005,
+                        "lng": -73.95397000000001
+                    },
+                    {
+                        "lat": 40.741330000000005,
+                        "lng": -73.95416
+                    },
+                    {
+                        "lat": 40.74137,
+                        "lng": -73.95421
+                    },
+                    {
+                        "lat": 40.74143,
+                        "lng": -73.95424000000001
+                    },
+                    {
+                        "lat": 40.741580000000006,
+                        "lng": -73.95426
+                    },
+                    {
+                        "lat": 40.741690000000006,
+                        "lng": -73.95424000000001
+                    },
+                    {
+                        "lat": 40.74208,
+                        "lng": -73.95411
+                    },
+                    {
+                        "lat": 40.742470000000004,
+                        "lng": -73.95400000000001
+                    },
+                    {
+                        "lat": 40.74266,
+                        "lng": -73.95405000000001
+                    },
+                    {
+                        "lat": 40.74273,
+                        "lng": -73.95405000000001
+                    },
+                    {
+                        "lat": 40.742830000000005,
+                        "lng": -73.95407
+                    },
+                    {
+                        "lat": 40.74342,
+                        "lng": -73.95387000000001
+                    },
+                    {
+                        "lat": 40.743770000000005,
+                        "lng": -73.95375
+                    },
+                    {
+                        "lat": 40.74412,
+                        "lng": -73.95363
+                    },
+                    {
+                        "lat": 40.744690000000006,
+                        "lng": -73.95345
+                    },
+                    {
+                        "lat": 40.746280000000006,
+                        "lng": -73.95292
+                    },
+                    {
+                        "lat": 40.74687,
+                        "lng": -73.95271000000001
+                    },
+                    {
+                        "lat": 40.74757,
+                        "lng": -73.95247
+                    },
+                    {
+                        "lat": 40.74826,
+                        "lng": -73.95224
+                    },
+                    {
+                        "lat": 40.74846,
+                        "lng": -73.95221000000001
+                    },
+                    {
+                        "lat": 40.74859,
+                        "lng": -73.95221000000001
+                    },
+                    {
+                        "lat": 40.749050000000004,
+                        "lng": -73.95221000000001
+                    },
+                    {
+                        "lat": 40.74922,
+                        "lng": -73.95324000000001
+                    },
+                    {
+                        "lat": 40.74935000000001,
+                        "lng": -73.95398
+                    },
+                    {
+                        "lat": 40.74947,
+                        "lng": -73.95482000000001
+                    },
+                    {
+                        "lat": 40.750260000000004,
+                        "lng": -73.95433000000001
+                    },
+                    {
+                        "lat": 40.74947,
+                        "lng": -73.95482000000001
+                    },
+                    {
+                        "lat": 40.74935000000001,
+                        "lng": -73.95398
+                    },
+                    {
+                        "lat": 40.74922,
+                        "lng": -73.95324000000001
+                    },
+                    {
+                        "lat": 40.749050000000004,
+                        "lng": -73.95221000000001
+                    },
+                    {
+                        "lat": 40.74859,
+                        "lng": -73.95221000000001
+                    },
+                    {
+                        "lat": 40.74846,
+                        "lng": -73.95221000000001
+                    },
+                    {
+                        "lat": 40.74826,
+                        "lng": -73.95224
+                    },
+                    {
+                        "lat": 40.74757,
+                        "lng": -73.95247
+                    },
+                    {
+                        "lat": 40.74687,
+                        "lng": -73.95271000000001
+                    },
+                    {
+                        "lat": 40.746280000000006,
+                        "lng": -73.95292
+                    },
+                    {
+                        "lat": 40.744690000000006,
+                        "lng": -73.95345
+                    },
+                    {
+                        "lat": 40.74412,
+                        "lng": -73.95363
+                    },
+                    {
+                        "lat": 40.74342,
+                        "lng": -73.95387000000001
+                    },
+                    {
+                        "lat": 40.742830000000005,
+                        "lng": -73.95407
+                    },
+                    {
+                        "lat": 40.742740000000005,
+                        "lng": -73.95413
+                    },
+                    {
+                        "lat": 40.742700000000006,
+                        "lng": -73.9539
+                    },
+                    {
+                        "lat": 40.742490000000004,
+                        "lng": -73.95284000000001
+                    },
+                    {
+                        "lat": 40.742290000000004,
+                        "lng": -73.95183
+                    },
+                    {
+                        "lat": 40.742160000000005,
+                        "lng": -73.95118000000001
+                    },
+                    {
+                        "lat": 40.74212,
+                        "lng": -73.95100000000001
+                    },
+                    {
+                        "lat": 40.741890000000005,
+                        "lng": -73.95109000000001
+                    },
+                    {
+                        "lat": 40.74185000000001,
+                        "lng": -73.95112
+                    },
+                    {
+                        "lat": 40.741800000000005,
+                        "lng": -73.95118000000001
+                    },
+                    {
+                        "lat": 40.741730000000004,
+                        "lng": -73.95129
+                    },
+                    {
+                        "lat": 40.7417,
+                        "lng": -73.95137000000001
+                    },
+                    {
+                        "lat": 40.74163,
+                        "lng": -73.95153
+                    },
+                    {
+                        "lat": 40.741600000000005,
+                        "lng": -73.95164000000001
+                    },
+                    {
+                        "lat": 40.74152,
+                        "lng": -73.95196
+                    },
+                    {
+                        "lat": 40.741460000000004,
+                        "lng": -73.95218000000001
+                    },
+                    {
+                        "lat": 40.74147000000001,
+                        "lng": -73.95232
+                    },
+                    {
+                        "lat": 40.741510000000005,
+                        "lng": -73.95283
+                    },
+                    {
+                        "lat": 40.741550000000004,
+                        "lng": -73.95368
+                    },
+                    {
+                        "lat": 40.741550000000004,
+                        "lng": -73.95444
+                    },
+                    {
+                        "lat": 40.74157,
+                        "lng": -73.95526000000001
+                    },
+                    {
+                        "lat": 40.741600000000005,
+                        "lng": -73.95551
+                    },
+                    {
+                        "lat": 40.741870000000006,
+                        "lng": -73.95689
+                    },
+                    {
+                        "lat": 40.741890000000005,
+                        "lng": -73.95700000000001
+                    },
+                    {
+                        "lat": 40.74203000000001,
+                        "lng": -73.9577
+                    },
+                    {
+                        "lat": 40.742110000000004,
+                        "lng": -73.95811
+                    },
+                    {
+                        "lat": 40.742290000000004,
+                        "lng": -73.95885000000001
+                    },
+                    {
+                        "lat": 40.7426,
+                        "lng": -73.95997000000001
+                    },
+                    {
+                        "lat": 40.74268,
+                        "lng": -73.96021
+                    },
+                    {
+                        "lat": 40.74275,
+                        "lng": -73.96039
+                    },
+                    {
+                        "lat": 40.742900000000006,
+                        "lng": -73.96066
+                    },
+                    {
+                        "lat": 40.74315,
+                        "lng": -73.96107
+                    },
+                    {
+                        "lat": 40.74342,
+                        "lng": -73.96145
+                    },
+                    {
+                        "lat": 40.745270000000005,
+                        "lng": -73.96398
+                    },
+                    {
+                        "lat": 40.74613,
+                        "lng": -73.96517
+                    },
+                    {
+                        "lat": 40.747260000000004,
+                        "lng": -73.96673000000001
+                    },
+                    {
+                        "lat": 40.747510000000005,
+                        "lng": -73.96707
+                    },
+                    {
+                        "lat": 40.747730000000004,
+                        "lng": -73.96747
+                    },
+                    {
+                        "lat": 40.747870000000006,
+                        "lng": -73.96781
+                    },
+                    {
+                        "lat": 40.748000000000005,
+                        "lng": -73.96818
+                    },
+                    {
+                        "lat": 40.7481,
+                        "lng": -73.96867
+                    },
+                    {
+                        "lat": 40.74814000000001,
+                        "lng": -73.96907
+                    },
+                    {
+                        "lat": 40.74815,
+                        "lng": -73.96932000000001
+                    },
+                    {
+                        "lat": 40.748090000000005,
+                        "lng": -73.96972000000001
+                    },
+                    {
+                        "lat": 40.74799,
+                        "lng": -73.9701
+                    },
+                    {
+                        "lat": 40.747890000000005,
+                        "lng": -73.97036
+                    },
+                    {
+                        "lat": 40.747800000000005,
+                        "lng": -73.97057000000001
+                    },
+                    {
+                        "lat": 40.747640000000004,
+                        "lng": -73.97081
+                    },
+                    {
+                        "lat": 40.74745,
+                        "lng": -73.97099
+                    },
+                    {
+                        "lat": 40.74709,
+                        "lng": -73.97126
+                    },
+                    {
+                        "lat": 40.746370000000006,
+                        "lng": -73.9718
+                    },
+                    {
+                        "lat": 40.74616,
+                        "lng": -73.97205000000001
+                    },
+                    {
+                        "lat": 40.74606,
+                        "lng": -73.97221
+                    },
+                    {
+                        "lat": 40.746,
+                        "lng": -73.97238
+                    },
+                    {
+                        "lat": 40.74595,
+                        "lng": -73.9727
+                    },
+                    {
+                        "lat": 40.74595,
+                        "lng": -73.97304000000001
+                    },
+                    {
+                        "lat": 40.74598,
+                        "lng": -73.97331000000001
+                    },
+                    {
+                        "lat": 40.746050000000004,
+                        "lng": -73.97351
+                    },
+                    {
+                        "lat": 40.74626000000001,
+                        "lng": -73.97402000000001
+                    },
+                    {
+                        "lat": 40.74635000000001,
+                        "lng": -73.97422
+                    },
+                    {
+                        "lat": 40.746340000000004,
+                        "lng": -73.97441
+                    },
+                    {
+                        "lat": 40.7466,
+                        "lng": -73.97503
+                    },
+                    {
+                        "lat": 40.74685,
+                        "lng": -73.97562
+                    },
+                    {
+                        "lat": 40.746880000000004,
+                        "lng": -73.97579
+                    },
+                    {
+                        "lat": 40.746860000000005,
+                        "lng": -73.97596
+                    },
+                    {
+                        "lat": 40.74682000000001,
+                        "lng": -73.9761
+                    },
+                    {
+                        "lat": 40.74673000000001,
+                        "lng": -73.97625000000001
+                    },
+                    {
+                        "lat": 40.74658,
+                        "lng": -73.97639000000001
+                    },
+                    {
+                        "lat": 40.7462,
+                        "lng": -73.97667000000001
+                    },
+                    {
+                        "lat": 40.74604,
+                        "lng": -73.97679000000001
+                    },
+                    {
+                        "lat": 40.7458,
+                        "lng": -73.97621000000001
+                    },
+                    {
+                        "lat": 40.745630000000006,
+                        "lng": -73.97582000000001
+                    },
+                    {
+                        "lat": 40.745470000000005,
+                        "lng": -73.97539
+                    },
+                    {
+                        "lat": 40.74485000000001,
+                        "lng": -73.97584
+                    },
+                    {
+                        "lat": 40.74436,
+                        "lng": -73.9762
+                    },
+                    {
+                        "lat": 40.74345,
+                        "lng": -73.97688000000001
+                    },
+                    {
+                        "lat": 40.74268,
+                        "lng": -73.97742000000001
+                    },
+                    {
+                        "lat": 40.742360000000005,
+                        "lng": -73.97767
+                    },
+                    {
+                        "lat": 40.74165,
+                        "lng": -73.9782
+                    },
+                    {
+                        "lat": 40.7398,
+                        "lng": -73.97954
+                    },
+                    {
+                        "lat": 40.73856000000001,
+                        "lng": -73.98045
+                    },
+                    {
+                        "lat": 40.73752,
+                        "lng": -73.9812
+                    },
+                    {
+                        "lat": 40.73543,
+                        "lng": -73.98269
+                    },
+                    {
+                        "lat": 40.732530000000004,
+                        "lng": -73.9848
+                    },
+                    {
+                        "lat": 40.73183,
+                        "lng": -73.98531000000001
+                    },
+                    {
+                        "lat": 40.731660000000005,
+                        "lng": -73.98542
+                    },
+                    {
+                        "lat": 40.731210000000004,
+                        "lng": -73.98577
+                    },
+                    {
+                        "lat": 40.731030000000004,
+                        "lng": -73.98592000000001
+                    },
+                    {
+                        "lat": 40.730900000000005,
+                        "lng": -73.98599
+                    },
+                    {
+                        "lat": 40.730290000000004,
+                        "lng": -73.98643000000001
+                    },
+                    {
+                        "lat": 40.729780000000005,
+                        "lng": -73.98682000000001
+                    },
+                    {
+                        "lat": 40.729290000000006,
+                        "lng": -73.98717
+                    },
+                    {
+                        "lat": 40.7286,
+                        "lng": -73.98767000000001
+                    },
+                    {
+                        "lat": 40.72814,
+                        "lng": -73.98799000000001
+                    },
+                    {
+                        "lat": 40.727880000000006,
+                        "lng": -73.98819
+                    },
+                    {
+                        "lat": 40.72731,
+                        "lng": -73.9886
+                    },
+                    {
+                        "lat": 40.72639,
+                        "lng": -73.9893
+                    },
+                    {
+                        "lat": 40.72509,
+                        "lng": -73.99025
+                    },
+                    {
+                        "lat": 40.72415,
+                        "lng": -73.99093
+                    },
+                    {
+                        "lat": 40.72404,
+                        "lng": -73.99104000000001
+                    },
+                    {
+                        "lat": 40.724000000000004,
+                        "lng": -73.99109
+                    },
+                    {
+                        "lat": 40.723800000000004,
+                        "lng": -73.99125000000001
+                    },
+                    {
+                        "lat": 40.72397,
+                        "lng": -73.99183000000001
+                    },
+                    {
+                        "lat": 40.724140000000006,
+                        "lng": -73.99235
+                    },
+                    {
+                        "lat": 40.724230000000006,
+                        "lng": -73.99265000000001
+                    },
+                    {
+                        "lat": 40.724380000000004,
+                        "lng": -73.99307
+                    },
+                    {
+                        "lat": 40.724700000000006,
+                        "lng": -73.99399000000001
+                    },
+                    {
+                        "lat": 40.72511,
+                        "lng": -73.99513
+                    },
+                    {
+                        "lat": 40.72523,
+                        "lng": -73.99563
+                    },
+                    {
+                        "lat": 40.72554,
+                        "lng": -73.99688
+                    },
+                    {
+                        "lat": 40.72587,
+                        "lng": -73.99758
+                    },
+                    {
+                        "lat": 40.72673,
+                        "lng": -73.99934
+                    },
+                    {
+                        "lat": 40.727410000000006,
+                        "lng": -74.00072
+                    },
+                    {
+                        "lat": 40.728030000000004,
+                        "lng": -74.00199
+                    },
+                    {
+                        "lat": 40.72815000000001,
+                        "lng": -74.00222000000001
+                    },
+                    {
+                        "lat": 40.72827,
+                        "lng": -74.00240000000001
+                    },
+                    {
+                        "lat": 40.72834,
+                        "lng": -74.00247
+                    },
+                    {
+                        "lat": 40.7284,
+                        "lng": -74.0026
+                    },
+                    {
+                        "lat": 40.72847,
+                        "lng": -74.00277000000001
+                    },
+                    {
+                        "lat": 40.728530000000006,
+                        "lng": -74.00274
+                    },
+                    {
+                        "lat": 40.72907,
+                        "lng": -74.00249000000001
+                    },
+                    {
+                        "lat": 40.729130000000005,
+                        "lng": -74.00246
+                    }
+                ]
+            },
+            "summary": "2nd Ave",
+            "warnings": [],
+            "waypoint_order": [
+                0,
+                1
+            ]
+        }
+    ],
+    "status": "OK"
+}
