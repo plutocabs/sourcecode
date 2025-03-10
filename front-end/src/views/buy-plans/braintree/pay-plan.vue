@@ -57,8 +57,19 @@ export default {
         };
     },
     mounted() {
+        let plan_id = this.$route.params.plan_id;
+
+        let braintreeScript = document.createElement("script");
+        braintreeScript.setAttribute("src", "https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.js");
+        
+        braintreeScript.onload = () => {
+            console.log("Braintree script loaded successfully");
+            this.loadPlan(plan_id);
+        };
+
+        document.head.appendChild(braintreeScript);
+
         this.isLoading = true;
-        this.loadBraintreeScript();
     },
     methods: {
         loadBraintreeScript() {
@@ -103,24 +114,59 @@ export default {
 
             braintree.dropin.create(
                 {
-                    authorization: this.plan.tokenization_key,
+                    authorization: self.plan.tokenization_key,
                     selector: "#dropin-container",
                 },
-                (err, instance) => {
+                function (err, instance) {
                     if (err) {
-                        console.error("Braintree Error:", err);
+                        console.error("Braintree Drop-in Error:", err);
                         return;
                     }
-                    this.braintreeInstance = instance;
+                    console.log("Braintree Drop-in Instance:", instance);
 
-                    this.$nextTick(() => {
-                        let payButton = document.querySelector("#payButton");
-                        if (!payButton) {
-                            console.error("Pay button not found!");
+                    let payButton = document.querySelector("#payButton");
+                    if (!payButton) {
+                        console.error("Pay button not found!");
+                        return;
+                    }
+
+                    payButton.addEventListener("click", function () {
+                        console.log("Pay button clicked!");
+                        if (!instance) {
+                            console.error("Braintree instance is undefined!");
                             return;
                         }
 
-                        payButton.addEventListener("click", this.processPayment);
+                        instance.requestPaymentMethod(function (err, payload) {
+                            if (err) {
+                                console.error("Error in requestPaymentMethod:", err);
+                                self.$swal("Error", err.message, "error");
+                                return;
+                            }
+
+                            console.log("Payment Method Retrieved:", payload);
+                            self.isLoading = true;
+
+                            axios.post("/users/capture-braintree", {
+                                plan_id: self.plan.id,
+                                nonce: payload.nonce,
+                            })
+                            .then((response) => {
+                                self.$notify({
+                                    title: "Success",
+                                    text: "Plan bought successfully",
+                                    type: "success",
+                                });
+                                self.$router.push({ name: "buy-plans" });
+                            })
+                            .catch((error) => {
+                                console.error("Error while processing payment:", error);
+                                self.$swal("Error", error.response?.data?.message || "Unknown error", "error");
+                            })
+                            .finally(() => {
+                                self.isLoading = false;
+                            });
+                        });
                     });
                 }
             );
