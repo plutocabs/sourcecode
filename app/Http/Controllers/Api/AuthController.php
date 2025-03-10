@@ -701,7 +701,8 @@ class AuthController extends Controller
         // Validate the request
         $request->validate([
             'requestId' => 'required|string|exists:users,request_id',
-            'otp' => 'required|string'
+            'otp' => 'required|string',
+            'device_name' => 'required|string'
         ]);
 
         // Replace with your actual API keys
