@@ -48,174 +48,126 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     data() {
         return {
             plan: null,
             isLoading: false,
-            braintreeInstance: null,
+            braintreeLoaded: false,
         };
     },
     mounted() {
-        let plan_id = this.$route.params.plan_id;
-
-        let braintreeScript = document.createElement("script");
-        braintreeScript.setAttribute("src", "https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.js");
-        
-        braintreeScript.onload = () => {
-            console.log("Braintree script loaded successfully");
-            this.loadPlan(plan_id);
-        };
-
-        document.head.appendChild(braintreeScript);
-
-        this.isLoading = true;
+        this.loadBraintreeScript();
     },
     methods: {
         loadBraintreeScript() {
-            let script = document.createElement("script");
-            script.src = "https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.js";
-            script.onload = () => {
-                let plan_id = this.$route.params.plan_id;
-                this.loadPlan(plan_id);
-            };
-            document.head.appendChild(script);
-        },
-        loadPlan(plan_id) {
-            axios
-                .get(`/plans/${plan_id}`)
-                .then((response) => {
-                    this.plan = response.data;
+            console.log("Loading Braintree script...");
 
-                    if (!this.plan.tokenization_key) {
-                        throw new Error("Tokenization key is missing");
-                    }
-
-                    this.displayPayments();
-                })
-                .catch((error) => {
-                    this.$notify({
-                        title: "Error",
-                        text: "Error while retrieving plans",
-                        type: "error",
-                    });
-                    console.error("Load Plan Error:", error);
-                    this.$swal("Error", error.response?.data?.message || "Unknown error", "error");
-                })
-                .finally(() => {
-                    this.isLoading = false;
-                });
-        },
-        displayPayments() {
-            if (!window.braintree) {
-                console.error("Braintree SDK not loaded!");
+            if (window.braintree) {
+                console.log("Braintree already loaded");
+                this.loadPlan(this.$route.params.plan_id);
                 return;
             }
 
+            const script = document.createElement("script");
+            script.src = "https://js.braintreegateway.com/web/dropin/1.41.0/js/dropin.js";
+            script.onload = () => {
+                console.log("Braintree script loaded successfully");
+                this.braintreeLoaded = true;
+                this.loadPlan(this.$route.params.plan_id);
+            };
+            script.onerror = () => {
+                console.error("Failed to load Braintree script");
+            };
+            document.head.appendChild(script);
+        },
+
+        async loadPlan(plan_id) {
+            this.isLoading = true;
+            try {
+                const response = await axios.get(`/plans/${plan_id}`);
+                this.plan = response.data;
+                console.log("Plan loaded:", this.plan);
+                this.displayPayments();
+            } catch (error) {
+                console.error("Error loading plan:", error);
+                this.$swal("Error", error.response?.data?.message || "Failed to load plan", "error");
+            } finally {
+                this.isLoading = false;
+            }
+        },
+
+        displayPayments() {
+            if (!this.braintreeLoaded) {
+                console.error("Braintree script not loaded yet");
+                return;
+            }
+
+            console.log("Initializing Braintree drop-in...");
+
             braintree.dropin.create(
                 {
-                    authorization: self.plan.tokenization_key,
+                    authorization: this.plan?.tokenization_key,
                     selector: "#dropin-container",
                 },
-                function (err, instance) {
+                (err, instance) => {
                     if (err) {
                         console.error("Braintree Drop-in Error:", err);
                         return;
                     }
-                    console.log("Braintree Drop-in Instance:", instance);
 
-                    let payButton = document.querySelector("#payButton");
+                    console.log("Braintree Drop-in initialized:", instance);
+
+                    const payButton = document.querySelector("#payButton");
                     if (!payButton) {
                         console.error("Pay button not found!");
                         return;
                     }
 
-                    payButton.addEventListener("click", function () {
+                    payButton.addEventListener("click", () => {
                         console.log("Pay button clicked!");
                         if (!instance) {
                             console.error("Braintree instance is undefined!");
                             return;
                         }
 
-                        instance.requestPaymentMethod(function (err, payload) {
+                        instance.requestPaymentMethod((err, payload) => {
                             if (err) {
                                 console.error("Error in requestPaymentMethod:", err);
-                                self.$swal("Error", err.message, "error");
+                                this.$swal("Error", err.message, "error");
                                 return;
                             }
 
                             console.log("Payment Method Retrieved:", payload);
-                            self.isLoading = true;
+
+                            this.isLoading = true;
 
                             axios.post("/users/capture-braintree", {
-                                plan_id: self.plan.id,
+                                plan_id: this.plan.id,
                                 nonce: payload.nonce,
                             })
                             .then((response) => {
-                                self.$notify({
+                                this.$notify({
                                     title: "Success",
                                     text: "Plan bought successfully",
                                     type: "success",
                                 });
-                                self.$router.push({ name: "buy-plans" });
+                                this.$router.push({ name: "buy-plans" });
                             })
                             .catch((error) => {
                                 console.error("Error while processing payment:", error);
-                                self.$swal("Error", error.response?.data?.message || "Unknown error", "error");
+                                this.$swal("Error", error.response?.data?.message || "Unknown error", "error");
                             })
                             .finally(() => {
-                                self.isLoading = false;
+                                this.isLoading = false;
                             });
                         });
                     });
                 }
             );
         },
-        processPayment() {
-            if (!this.braintreeInstance) {
-                console.error("Braintree instance not initialized!");
-                return;
-            }
-
-            this.braintreeInstance.requestPaymentMethod((err, payload) => {
-                if (err) {
-                    this.$notify({
-                        title: "Error",
-                        text: "Error while buying plan",
-                        type: "error",
-                    });
-                    this.$swal("Error", err.message, "error");
-                    return;
-                }
-
-                this.isLoading = true;
-
-                axios
-                    .post("/users/capture-braintree", {
-                        plan_id: this.plan.id,
-                        nonce: payload.nonce,
-                    })
-                    .then(() => {
-                        this.$notify({
-                            title: "Success",
-                            text: "Plan bought successfully",
-                            type: "success",
-                        });
-                        this.$router.push({ name: "buy-plans" });
-                    })
-                    .catch((error) => {
-                        this.$notify({
-                            title: "Error",
-                            text: "Error while buying plan",
-                            type: "error",
-                        });
-                        this.$swal("Error", error.response?.data?.message || "Unknown error", "error");
-                    })
-                    .finally(() => {
-                        this.isLoading = false;
-                    });
-            });
-        }
-    }
+    },
 };
 </script>
