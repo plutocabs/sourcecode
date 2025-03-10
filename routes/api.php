@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api;
+use App\Http\Controllers\Api\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -388,7 +389,9 @@ Route::group(['prefix' => 'auth'], function () {
     //verifyUser
     Route::post('/verify-user', [Api\AuthController::class, 'verifyUser'])->middleware(['auth:sanctum']);
     //verify-otp
-    Route::post('/verify-otp', [Api\AuthController::class, 'verifyOtp'])->middleware(['auth:sanctum']);
+    Route::post('/verify-otp', [Api\AuthController::class, 'verifyOtp']);
+
+    Route::post('/login-via-otp', [AuthController::class, 'loginViaOtp']);
 });
 
 Route::group(['prefix' => 'activation'], function () {

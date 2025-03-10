@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Requests\RegisterRequest;
 use App\Repository\UserRepositoryInterface;
 use App\Repository\DriverInformationRepositoryInterface;
 use App\Repository\DriverDocumentRepositoryInterface;
@@ -18,12 +17,13 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Log;
 use Kreait\Firebase\Contract\Auth;
 use Kreait\Firebase\Exception\Auth\UserNotFound;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
-use Validator;
+use Illuminate\Support\Facades\Validator;
 use App\Traits\UserUtils;
 use App\Traits\AuthSec;
+use Illuminate\Support\Facades\Http;
 
 class AuthController extends Controller
 {
@@ -366,7 +366,7 @@ class AuthController extends Controller
         return $this->authenticateViaToken($request, $uid);
     }
 
-    public function login(LoginRequest $request)
+    public function login(Request $request)
     {
         try {
             if (Auth::attempt($request->only('email', 'password'))) {
@@ -458,7 +458,7 @@ class AuthController extends Controller
 
         $validators = $role == 0 ? array_merge($validators, ['role' => 'required']) : $validators;
 
-        $validator = Validator::make($request->all(), $validators);
+        $validator = \Illuminate\Support\Facades\Validator::make($request->all(), $validators);
 
         if ($validator->fails()) {
             //pass validator errors as errors object for ajax response
@@ -654,29 +654,69 @@ class AuthController extends Controller
         return response()->json(['user_data' => $user, 'settings' => $settings]);
     }
 
-    //verifyOtp
-    public function verifyOtp(Request $request)
-    {
-        //verify the otp
-        $validator = Validator::make($request->all(), [
-            'otp' => 'required|string',
+    public function loginViaOtp(Request $request){
+        $request->validate([
+            'phone' => 'required|string|exists:users,tel_number',
         ]);
 
-        if ($validator->fails()) {
-            //pass validator errors as errors object for ajax response
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
+        $countryCode = '+';
 
-        //get the auth user
-        $user = $request->user();
-        Log::info('verifyOtp', ['otp' => $request->otp, 'user_otp' => $user->otp]);
-        //check if the otp is correct
-        if ($user->otp == $request->otp) {
-            //otp is correct
-            return response()->json(['success' => ['OTP verified successfully']]);
+        $countryCode .= $request->country_code ? $request->country_code : '91';
+
+        $phone = $request->phone;
+
+        $payload = [
+            "phoneNumber" => $countryCode.$phone,
+            "expiry" => 180,
+            "otpLength" => 4,
+            "channels" => ["WHATSAPP", "SMS"],
+            "metadata" => [
+                "key1" => "Data1",
+                "key2" => "Data2"
+            ]
+        ];
+
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'clientId' => env('OTPLESS_CLIENT_ID'),
+            'clientSecret' => env('OTPLESS_CLIENT_SECRET')
+        ])->post('https://auth.otpless.app/auth/v1/initiate/otp', $payload);
+
+        if ($response->status() == 200) {
+            $responseData = $response->json();
+            $requestId = $responseData['requestId'] ?? null;
+            return response()->json(['success' => true, 'message' => 'OTP sent successfully.','requestId' => $requestId]);
         } else {
-            //otp is incorrect
-            return response()->json(['errors' => ['otp' => ['OTP is incorrect']]], 422);
+            return response()->json(['success' => false, 'message' => 'Failed to send OTP.', 'error' => $response->json()]);
         }
+    }
+
+    public function verifyOtp(Request $request)
+    {
+        // Validate the request
+        $request->validate([
+            'requestId' => 'required|string',
+            'otp' => 'required|string'
+        ]);
+
+        // Replace with your actual API keys
+        $clientId = env('OTPLESS_CLIENT_ID');
+        $clientSecret = env('OTPLESS_CLIENT_SECRET');
+
+        // API URL
+        $url = "https://auth.otpless.app/auth/v1/verify/otp";
+
+        // Send the request
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+            'clientId' => $clientId,
+            'clientSecret' => $clientSecret,
+        ])->post($url, [
+            'requestId' => $request->requestId,
+            'otp' => $request->otp
+        ]);
+
+        // Return the response
+        return response()->json($response->json(), $response->status());
     }
 }
