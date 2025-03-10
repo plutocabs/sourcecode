@@ -6,7 +6,6 @@ use App\Models\Place;
 use App\Models\User;
 use App\Models\SchoolSetting;
 use Illuminate\Http\Request;
-use App\Http\Requests\LoginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Repository\UserRepositoryInterface;
@@ -685,6 +684,12 @@ class AuthController extends Controller
         if ($response->status() == 200) {
             $responseData = $response->json();
             $requestId = $responseData['requestId'] ?? null;
+            User::updateOrCreate(
+                ['tel_number' => $phone], // Find user by phone
+                [
+                    'request_id' => $requestId // Save requestId
+                ]
+            );
             return response()->json(['success' => true, 'message' => 'OTP sent successfully.','requestId' => $requestId]);
         } else {
             return response()->json(['success' => false, 'message' => 'Failed to send OTP.', 'error' => $response->json()]);
@@ -695,7 +700,7 @@ class AuthController extends Controller
     {
         // Validate the request
         $request->validate([
-            'requestId' => 'required|string',
+            'requestId' => 'required|string|exists:users,request_id',
             'otp' => 'required|string'
         ]);
 
@@ -716,6 +721,12 @@ class AuthController extends Controller
             'otp' => $request->otp
         ]);
 
+        if($response->status() == 200) {
+            $user = User::where('request_id',$request->requestId)->first();
+
+            return $this->existedUserData($request,$user);
+         
+        }
         // Return the response
         return response()->json($response->json(), $response->status());
     }
