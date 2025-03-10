@@ -690,7 +690,7 @@ class AuthController extends Controller
                     'request_id' => $requestId // Save requestId
                 ]
             );
-            return response()->json(['success' => true, 'message' => 'OTP sent successfully.','requestId' => $requestId]);
+            return response()->json(['success' => true, 'message' => 'OTP sent successfully.','request_id' => $requestId]);
         } else {
             return response()->json(['success' => false, 'message' => 'Failed to send OTP.', 'error' => $response->json()]);
         }
@@ -700,7 +700,7 @@ class AuthController extends Controller
     {
         // Validate the request
         $request->validate([
-            'requestId' => 'required|string|exists:users,request_id',
+            'request_id' => 'required|string|exists:users,request_id',
             'otp' => 'required|string',
             'device_name' => 'required|string'
         ]);
@@ -718,12 +718,12 @@ class AuthController extends Controller
             'clientId' => $clientId,
             'clientSecret' => $clientSecret,
         ])->post($url, [
-            'requestId' => $request->requestId,
+            'requestId' => $request->request_id,
             'otp' => $request->otp
         ]);
 
         if($response->status() == 200) {
-            $user = User::where('request_id',$request->requestId)->first();
+            $user = User::where('request_id',$request->request_id)->first();
 
             return $this->existedUserData($request,$user);
          
@@ -731,4 +731,5 @@ class AuthController extends Controller
         // Return the response
         return response()->json($response->json(), $response->status());
     }
+
 }
