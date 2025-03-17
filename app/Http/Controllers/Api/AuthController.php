@@ -606,14 +606,14 @@ class AuthController extends Controller
 
         //create token
         $token = $this->createToken($user, $request->device_name, [$tokenAbility]);
-        if($user->role_id > 2)
-        {
-            $token = $this->get_sec_id($token);
-            if($token == null)
-            {
-                return response()->json(['errors' => ['authentication' => ['Error in generating token']]], 403);
-            }
-        }
+        // if($user->role_id > 2)
+        // {
+        //     $token = $this->get_sec_id($token);
+        //     if($token == null)
+        //     {
+        //         return response()->json(['errors' => ['authentication' => ['Error in generating token']]], 403);
+        //     }
+        // }
         return response()->json(['token' => $token, 'user_data' => $user, 'admin' => ($user->role_id == 1)]);
     }
 
@@ -655,7 +655,7 @@ class AuthController extends Controller
 
     public function loginViaOtp(Request $request){
         $request->validate([
-            'phone' => 'required|string|exists:users,tel_number',
+            'phone' => 'required|string|digits:10',
         ]);
 
         $countryCode = '+';
@@ -684,12 +684,22 @@ class AuthController extends Controller
         if ($response->status() == 200) {
             $responseData = $response->json();
             $requestId = $responseData['requestId'] ?? null;
-            User::updateOrCreate(
-                ['tel_number' => $phone], // Find user by phone
-                [
-                    'request_id' => $requestId // Save requestId
-                ]
-            );
+
+            if(User::where('tel_number',$phone)->first()){
+                User::update(
+                    ['tel_number' => $phone], // Find user by phone
+                    [
+                        'request_id' => $requestId // Save requestId
+                    ]
+                );
+            }else{
+                User::create([
+                    'name' => "",
+                    "balance" => 0,
+                    'role_id' => 3,
+                    'request_id' => $requestId
+                ]);
+            }
             return response()->json(['success' => true, 'message' => 'OTP sent successfully.','request_id' => $requestId]);
         } else {
             return response()->json(['success' => false, 'message' => 'Failed to send OTP.', 'error' => $response->json()]);
