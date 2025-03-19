@@ -621,7 +621,7 @@ class AuthController extends Controller
     public function verifyUser(Request $request)
     {
         //get the auth user
-        $user = $request->user();
+        return $user = $request->user();
 
         if (
             ($user->role_id == 2 && $user->status_id != 1) ||
@@ -686,8 +686,8 @@ class AuthController extends Controller
             $requestId = $responseData['requestId'] ?? null;
 
             if(User::where('tel_number',$phone)->first()){
-                User::update(
-                    ['tel_number' => $phone], // Find user by phone
+                User::where('tel_number', $phone)
+                ->update( 
                     [
                         'request_id' => $requestId // Save requestId
                     ]
