@@ -696,7 +696,7 @@ trait TripUtils {
                         //create transaction
                         DB::beginTransaction();
                         try {
-                            $plannedTrip = PlannedTrip::create([
+                            $plannedTrip = PlannedTrip::insertOrIgnore([
                                 'channel' => $trip->channel,
                                 'trip_id' => $trip->id,
                                 'route_id' => $trip->route_id,
