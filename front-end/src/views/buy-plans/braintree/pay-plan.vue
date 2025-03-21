@@ -74,81 +74,79 @@ export default {
         this.loadPlan(plan_id);
     },
     methods: {
-        displayPayments() {
-            let self = this;
-            setTimeout(() => {
-                braintree.dropin.create(
-                    {
-                        authorization: self.plan.tokenization_key,
-                        selector: "#dropin-container",
-                    },
-                    function (err, instance) {
-                        if (err) console.error(err);
-                        let payButton = document.querySelector("#payButton");
-                        payButton.addEventListener("click", function () {
-                            self.createCashfreeOrder();
+            displayPayments() {
+                let self = this;
+                setTimeout(() => {
+                    braintree.dropin.create(
+                        {
+                            authorization: self.plan.tokenization_key,
+                            selector: "#dropin-container",
+                        },
+                        function (err, instance) {
+                            if (err) console.error(err);
+                            let payButton = document.querySelector("#payButton");
+                            payButton.addEventListener("click", function () {
+                                self.createCashfreeOrder();
+                            });
+                        }
+                    );
+                    this.isLoading = false;
+                }, 1000);
+            },
+            loadPlan(plan_id) {
+                this.plans = [];
+                axios
+                    .get(`/plans/${plan_id}`)
+                    .then((response) => {
+                        this.plan = response.data;
+                        this.displayPayments();
+                    })
+                    .catch((error) => {
+                        this.$notify({
+                            title: "Error",
+                            text: "Error while retrieving plans",
+                            type: "error",
+                        });
+                        console.log(error);
+                        this.$swal("Error", error.response.data.message, "error");
+                    })
+                    .then(() => {
+
+                    });
+            },
+
+            createCashfreeOrder() {
+                let self = this;
+                self.isLoading = true;
+
+                alert();
+
+                axios.post("/api/create-cashfree-order", {
+                    plan_id: self.plan.id,
+                    amount: self.plan.price,
+                    currency: self.plan.currency_code,
+                }).then((response) => {
+                    if (response.data.payment_link) {
+                        window.location.href = response.data.payment_link; // Redirect to Cashfree payment page
+                    } else {
+                        self.$notify({
+                            title: "Error",
+                            text: "Unable to generate payment link",
+                            type: "error",
                         });
                     }
-                );
-                this.isLoading = false;
-            }, 1000);
-        },
-        loadPlan(plan_id) {
-            this.plans = [];
-            axios
-                .get(`/plans/${plan_id}`)
-                .then((response) => {
-                    this.plan = response.data;
-                    this.displayPayments();
-                })
-                .catch((error) => {
-                    this.$notify({
+                }).catch((error) => {
+                    self.$notify({
                         title: "Error",
-                        text: "Error while retrieving plans",
+                        text: "Error while processing payment",
                         type: "error",
                     });
-                    console.log(error);
-                    this.$swal("Error", error.response.data.message, "error");
+                    self.$swal("Error", error.response.data.message, "error");
                 })
-                .then(() => {
-
-                });
-        },
-
-        createCashfreeOrder() {
-        let self = this;
-        self.isLoading = true;
-
-        alert();
-
-        axios.post("/api/create-cashfree-order", {
-            plan_id: self.plan.id,
-            amount: self.plan.price,
-            currency: self.plan.currency_code,
-        }).then((response) => {
-            if (response.data.payment_link) {
-                window.location.href = response.data.payment_link; // Redirect to Cashfree payment page
-            } else {
-                self.$notify({
-                    title: "Error",
-                    text: "Unable to generate payment link",
-                    type: "error",
+                .finally(() => {
+                    self.isLoading = false;
                 });
             }
-        })
-        .catch((error) => {
-            self.$notify({
-                title: "Error",
-                text: "Error while processing payment",
-                type: "error",
-            });
-            self.$swal("Error", error.response.data.message, "error");
-        })
-        .finally(() => {
-            self.isLoading = false;
-        });
-        }
-
-    },
+    }
 };
 </script>
