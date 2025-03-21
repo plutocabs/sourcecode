@@ -90,60 +90,46 @@ export default {
                         if (err) console.error(err);
                         let payButton = document.querySelector("#payButton");
                         payButton.addEventListener("click", function () {
-                            instance.requestPaymentMethod(function (err, payload) {
-                                if (err)
-                                {
-                                    self.$notify({
-                                        title: "Error",
-                                        text: "Error while buying plan",
-                                        type: "error",
-                                    });
-                                    self.$swal(
-                                        "Error",
-                                        err.message,
-                                        "error"
-                                    );
-                                    return;
-                                }
-                                self.isLoading = true;
-                                // Submit payload.nonce to your server
-                                axios
-                                    .post("/users/capture-braintree-parent", {
-                                        plan_id: self.plan_id,
-                                        nonce: payload.nonce,
-                                        parent_id: self.parent_id,
-                                    })
-                                    .then((response) => {
-                                        self.$notify({
-                                            title: "Success",
-                                            text: "Plan bought successfully",
-                                            type: "success",
-                                        });
-                                        //go back one page
-                                        self.$router.go(-1);
-                                    })
-                                    .catch((error) => {
-                                        self.$notify({
-                                            title: "Error",
-                                            text: "Error while buying plan",
-                                            type: "error",
-                                        });
-                                        self.$swal(
-                                            "Error",
-                                            error.response.data.message,
-                                            "error"
-                                        );
-                                    })
-                                    .then(() => {
-                                        self.isLoading = false;
-                                    });
-                            });
+                            self.createCashfreeOrder();
                         });
                     }
                 );
                 this.isLoading = false;
             }, 1000);
         },
+
+        createCashfreeOrder() {
+                let self = this;
+                self.isLoading = true;
+
+                alert();
+
+                axios.post("/api/create-cashfree-order", {
+                    plan_id: self.plan.id,
+                    amount: self.plan.price,
+                    currency: self.plan.currency_code,
+                }).then((response) => {
+                    if (response.data.payment_link) {
+                        window.location.href = response.data.payment_link; // Redirect to Cashfree payment page
+                    } else {
+                        self.$notify({
+                            title: "Error",
+                            text: "Unable to generate payment link",
+                            type: "error",
+                        });
+                    }
+                }).catch((error) => {
+                    self.$notify({
+                        title: "Error",
+                        text: "Error while processing payment",
+                        type: "error",
+                    });
+                    self.$swal("Error", error.response.data.message, "error");
+                })
+                .finally(() => {
+                    self.isLoading = false;
+                });
+            },
     },
 };
 </script>
