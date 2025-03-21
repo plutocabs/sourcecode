@@ -27,22 +27,22 @@ class Authenticate extends Middleware
     }
 
     // //handle
-    public function handle($request, Closure $next, ...$guards)
-    {
-        // $request = $this->get_bearer($request);
-        // if($request == null)
-        // {
-        //     return response()->json(['error' => ['Unauthorized']], 401);
-        // }
-        // //get the auth user
-        // $user = auth('sanctum')->user();
-        // //check if he is suspended
-        // if (($user != null) && (($user->role == 1 && $user->status_id != 1) ||($user->role == 2 && $user->status_id == 3)))
-        // {
-        //     return response()->json(['error' => ['Unauthorized']], 401);
-        // }
+    // public function handle($request, Closure $next, ...$guards)
+    // {
+    //     // $request = $this->get_bearer($request);
+    //     // if($request == null)
+    //     // {
+    //     //     return response()->json(['error' => ['Unauthorized']], 401);
+    //     // }
+    //     // //get the auth user
+    //     // $user = auth('sanctum')->user();
+    //     // //check if he is suspended
+    //     // if (($user != null) && (($user->role == 1 && $user->status_id != 1) ||($user->role == 2 && $user->status_id == 3)))
+    //     // {
+    //     //     return response()->json(['error' => ['Unauthorized']], 401);
+    //     // }
 
-        // $this->authenticate($request, $guards);
-        return $next($request);
-    }
+    //     // $this->authenticate($request, $guards);
+    //     return $next($request);
+    // }
 }
