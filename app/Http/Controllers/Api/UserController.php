@@ -220,15 +220,17 @@ class UserController extends Controller
 
         // Process drivers to check for expired documents
         $drivers = $drivers->map(function ($driver) {
-            // Check if driverInformation exists and has documents
-            $documents = $driver->driverInformation?->documents ?? collect();
-
-            // Determine if any document is expired
-            $driver->expired = $documents->contains(fn($doc) => isset($doc->expiry_date) && $doc->expiry_date < Carbon::now());
-
-            // Remove documents to avoid returning unnecessary data
-            unset($driver->driverInformation->documents);
-
+            // Ensure driverInformation exists
+            $driverInfo = $driver->driverInformation;
+    
+            // Check if any document is expired
+            $driver->expired = optional($driverInfo->documents)->contains(fn($doc) => isset($doc->expiry_date) && $doc->expiry_date < Carbon::now());
+    
+            // Remove documents safely by converting driverInformation to an array
+            if ($driverInfo) {
+                $driver->driverInformation = collect($driverInfo)->except('documents');
+            }
+    
             return $driver;
         });
 
