@@ -221,7 +221,7 @@ class UserController extends Controller
         //loop through the drivers and check the expiry date of the documents
         foreach ($drivers as $driver) {
             $expired = false;
-            foreach ($driver?->driverInformation?->documents as $document) {
+            foreach ($driver->driverInformation?->documents as $document) {
                 if($document->expiry_date < Carbon::now())
                 {
                     $expired = true;
