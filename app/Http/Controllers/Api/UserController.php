@@ -218,22 +218,17 @@ class UserController extends Controller
         //driver_schools
         $drivers = $this->userRepository->allWhere(['*'], ['bus', 'driverInformation.documents'], [['school_id', '=', $authUser->id], ['role_id', '=', 3]], true);
 
-        //loop through the drivers and check the expiry date of the documents
-        foreach ($drivers as $driver) {
-            $expired = false;
-            foreach ($driver->driverInformation?->documents as $document) {
-                if($document->expiry_date < Carbon::now())
-                {
-                    $expired = true;
-                    break;
-                }
-            }
-            $driver->expired = $expired;
-        }
-
-        //remove the documents
+        // Process drivers to check for expired documents
         $drivers = $drivers->map(function ($driver) {
+            // Check if driverInformation exists and has documents
+            $documents = $driver->driverInformation?->documents ?? collect();
+
+            // Determine if any document is expired
+            $driver->expired = $documents->contains(fn($doc) => isset($doc->expiry_date) && $doc->expiry_date < Carbon::now());
+
+            // Remove documents to avoid returning unnecessary data
             unset($driver->driverInformation->documents);
+
             return $driver;
         });
 
