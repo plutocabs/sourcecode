@@ -621,7 +621,7 @@ class AuthController extends Controller
     public function verifyUser(Request $request)
     {
         //get the auth user
-        return $user = $request->user();
+        $user = $request->user();
 
         if (
             ($user->role_id == 2 && $user->status_id != 1) ||
