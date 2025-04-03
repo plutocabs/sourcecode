@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use App\Traits\UserUtils;
 use App\Traits\AuthSec;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Illuminate\Support\Facades\Http;
 
 class AuthController extends Controller
@@ -766,6 +767,12 @@ class AuthController extends Controller
                 'regex:/^[2-9]{1}[0-9]{11}$/'
             ]
         ]);
+
+        $user = FacadesAuth::user();
+
+        $user->adhar_verify = 1;
+
+        $user->save();
     
         return response()->json(['message' => 'Aadhaar number is valid']);
     }

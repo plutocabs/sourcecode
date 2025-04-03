@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\GoogleMapsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -210,6 +211,8 @@ Route::group(['prefix' => 'stops'], function () {
     Route::post('/set-pickup-drop-off-location', [Api\StopController::class, 'setPickupDropOffLocation'])->middleware(['auth:sanctum', 'parent']);
 });
 
+Route::get('/distance', [GoogleMapsController::class, 'getDistance']);
+
 Route::group(['prefix' => 'trips'], function () {
     Route::post('/create-edit', [Api\TripController::class, 'createEdit'])->middleware(['auth:sanctum', 'school']);
     Route::post('/trash-restore', [Api\TripController::class, 'trashRestore'])->middleware(['auth:sanctum', 'school']);
@@ -225,6 +228,8 @@ Route::group(['prefix' => 'trips'], function () {
     Route::get('/suspensions', [Api\TripController::class, 'getTripSuspensions'])->middleware(['auth:sanctum']);
     Route::get('/trip/{id}', [Api\TripController::class, 'getTrip'])->middleware(['auth:sanctum']);
     Route::get('/{id}', [Api\TripController::class, 'getTripDetails'])->middleware(['auth:sanctum']);
+
+   
 });
 
 //students
@@ -395,7 +400,9 @@ Route::group(['prefix' => 'auth'], function () {
 
     Route::post('/login-via-otp', [AuthController::class, 'loginViaOtp']);
 
-    Route::get('/aadhaar-varification', [AuthController::class, 'adharVerify']);
+    Route::get('/aadhaar-varification', [AuthController::class, 'adharVerify'])->middleware(['auth:sanctum', 'parent-driver']);
+
+    
 });
 
 Route::group(['prefix' => 'activation'], function () {
