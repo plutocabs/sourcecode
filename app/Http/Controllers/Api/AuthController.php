@@ -758,4 +758,16 @@ class AuthController extends Controller
         return response()->json($response->json(), $response->status());
     }
 
+    public function adharVerify(Request $request){
+
+        $request->validate([
+            'aadhaar_number' => [
+                'required',
+                'regex:/^[2-9]{1}[0-9]{11}$/'
+            ]
+        ]);
+    
+        return response()->json(['message' => 'Aadhaar number is valid']);
+    }
+
 }

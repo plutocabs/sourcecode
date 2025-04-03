@@ -201,7 +201,8 @@ Route::group(['prefix' => 'stops'], function () {
     Route::get('/{id}', [Api\StopController::class, 'getStop']);
 
     //getClosestStops
-    Route::get('/get-closest-stops/all', [Api\StopController::class, 'getClosestStops'])->middleware(['auth:sanctum', 'parent']);
+    Route::get('/get-closest-stops/all', [Api\StopController::class, 'getClosestStops']);
+    //->middleware(['auth:sanctum', 'parent']);
 
     //set pickup drop-off stop
     Route::post('/set-pickup-drop-off', [Api\StopController::class, 'setPickupDropOff'])->middleware(['auth:sanctum', 'parent']);
@@ -387,11 +388,14 @@ Route::group(['prefix' => 'auth'], function () {
     //loginFromAdminToSchool
     Route::post('/login-from-admin-to-school', [Api\AuthController::class, 'loginFromAdminToSchool'])->middleware(['auth:sanctum', 'admin']);
     //verifyUser
-    Route::post('/verify-user', [Api\AuthController::class, 'verifyUser'])->middleware(['auth:sanctum']);
+    Route::post('/verify-user', [Api\AuthController::class, 'verifyUser'])
+    ->middleware(['auth:sanctum']);
     //verify-otp
     Route::post('/verify-otp', [Api\AuthController::class, 'verifyOtp']);
 
     Route::post('/login-via-otp', [AuthController::class, 'loginViaOtp']);
+
+    Route::get('/aadhaar-varification', [AuthController::class, 'adharVerify']);
 });
 
 Route::group(['prefix' => 'activation'], function () {
