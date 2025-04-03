@@ -656,13 +656,28 @@ class AuthController extends Controller
     public function loginViaOtp(Request $request){
         $request->validate([
             'phone' => 'required|string|digits:10',
+            'role_type' => 'required|string',
         ]);
+
+        
 
         $countryCode = '+';
 
         $countryCode .= $request->country_code ? $request->country_code : '91';
 
         $phone = $request->phone;
+        $roleId = 3;
+        if($request->role_type == 'driver'){
+            $roleId = 3;
+            if(User::where(['tel_number'=> $phone])->whereNot('role_id',3)->first()){
+                return response()->json(['success'=> false,'message' => "The phone field is already exist!"],422);
+            }
+        }else if($request->role_type == 'parent'){
+            $roleId = 4;
+            if(User::where(['tel_number'=> $phone])->whereNot('role_id',4)->first()){
+                return response()->json(['success'=> false,'message' => "The phone field is already exist!"],422);
+            }
+        }
 
         $payload = [
             "phoneNumber" => $countryCode.$phone,
@@ -696,7 +711,8 @@ class AuthController extends Controller
                 User::create([
                     'name' => "",
                     "balance" => 0,
-                    'role_id' => 3,
+                    "tel_number" => $phone,
+                    'role_id' => $roleId,
                     'request_id' => $requestId
                 ]);
             }
