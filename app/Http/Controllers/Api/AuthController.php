@@ -490,6 +490,7 @@ class AuthController extends Controller
             $localUser = User::create([
                 'name' => $request->name,
                 'email' => $authUser->email,
+                'tel_number' => $request?->phone,
                 'password' => $authUser->passwordHash!=null? $authUser->passwordHash : "",
                 'uid' => $authUser->uid,
                 'role_id' => $role,
@@ -775,6 +776,24 @@ class AuthController extends Controller
         $user->save();
     
         return response()->json(['message' => 'Aadhaar number is valid']);
+    }
+
+    public function loginViaMobile(Request $request){
+
+        $request->validate([
+            "phone" => "required|digits:10",
+            "password" => "required",
+        ]);
+
+        $user = User::where('tel_number',$request->phone)->first();
+        if (!$user || !Hash::check($request->password, $user->password)) {
+            return response()->json(['message' => 'Invalid mobile number or password'], 401);
+        }
+
+        return response()->json([
+            'success' => true,
+            'user' => $user,
+        ]);
     }
 
 }

@@ -402,7 +402,7 @@ Route::group(['prefix' => 'auth'], function () {
 
     Route::get('/aadhaar-varification', [AuthController::class, 'adharVerify'])->middleware(['auth:sanctum', 'parent-driver']);
 
-    
+    Route::post('/login-via-phone', [AuthController::class, 'loginViaMobile']);
 });
 
 Route::group(['prefix' => 'activation'], function () {
