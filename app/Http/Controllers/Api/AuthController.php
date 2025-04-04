@@ -658,28 +658,13 @@ class AuthController extends Controller
     public function loginViaOtp(Request $request){
         $request->validate([
             'phone' => 'required|string|digits:10',
-            'role_type' => 'required|string',
         ]);
-
-        
 
         $countryCode = '+';
 
         $countryCode .= $request->country_code ? $request->country_code : '91';
 
         $phone = $request->phone;
-        $roleId = 3;
-        if($request->role_type == 'driver'){
-            $roleId = 3;
-            if(User::where(['tel_number'=> $phone])->whereNot('role_id',3)->first()){
-                return response()->json(['success'=> false,'message' => "The phone field is already exist!"],422);
-            }
-        }else if($request->role_type == 'parent'){
-            $roleId = 4;
-            if(User::where(['tel_number'=> $phone])->whereNot('role_id',4)->first()){
-                return response()->json(['success'=> false,'message' => "The phone field is already exist!"],422);
-            }
-        }
 
         $payload = [
             "phoneNumber" => $countryCode.$phone,
@@ -702,22 +687,13 @@ class AuthController extends Controller
             $responseData = $response->json();
             $requestId = $responseData['requestId'] ?? null;
 
-            if(User::where('tel_number',$phone)->first()){
-                User::where('tel_number', $phone)
+            User::where('tel_number', $phone)
                 ->update( 
                     [
                         'request_id' => $requestId // Save requestId
                     ]
                 );
-            }else{
-                User::create([
-                    'name' => "",
-                    "balance" => 0,
-                    "tel_number" => $phone,
-                    'role_id' => $roleId,
-                    'request_id' => $requestId
-                ]);
-            }
+           
             return response()->json(['success' => true, 'message' => 'OTP sent successfully.','request_id' => $requestId]);
         } else {
             return response()->json(['success' => false, 'message' => 'Failed to send OTP.', 'error' => $response->json()]);
@@ -781,11 +757,24 @@ class AuthController extends Controller
     public function loginViaMobile(Request $request){
 
         $request->validate([
-            "phone" => "required|digits:10",
-            "password" => "required",
+            "phone" => "required|digits:10|exists:users,tel_number",
+            "password" => "required|string",
+            "role_type" => "required|string"
         ]);
 
-        $user = User::where('tel_number',$request->phone)->first();
+        $phone = $request->phone;
+
+        if($request->role_type == 'driver'){
+            if(User::where(['tel_number'=> $phone])->whereNot('role_id',3)->first()){
+                return response()->json(['success'=> false,'message' => "The phone number is already registered with parent role!"],422);
+            }
+        }else if($request->role_type == 'parent'){
+            if(User::where(['tel_number'=> $phone])->whereNot('role_id',4)->first()){
+                return response()->json(['success'=> false,'message' => "The phone number is already exist registered with driver role!"],422);
+            }
+        }
+
+        $user = User::where('tel_number',$phone)->first();
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json(['message' => 'Invalid mobile number or password'], 401);
         }
