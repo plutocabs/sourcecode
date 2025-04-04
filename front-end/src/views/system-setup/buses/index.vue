@@ -92,6 +92,19 @@
                       required
                     ></v-text-field>
                   </v-col>
+                  <v-col
+                    cols="12"
+                    sm="6"
+                    md="4"
+                  >
+                    <v-text-field
+                      v-model="milage"
+                      :rules="milageRules"
+                      label="Milage km/l*"
+                      hint="milage of bus km/l"
+                      required
+                    ></v-text-field>
+                  </v-col>
                 </v-row>
               </v-container>
             </v-card-text>
@@ -201,6 +214,11 @@ export default {
       capacity: '',
       capacityRules: [
         v => /^[0-9]+$/.test(v) || 'Capacity is not valid',
+      ],
+      milage: '',
+      milageRules: [
+        v => !!v || 'Milage field is required',
+        v => /^[0-9]+$/.test(v) || 'Milage is not valid',
       ],
       headers: [
         { text: "ID", value: "id", align: "start", filterable: false },
