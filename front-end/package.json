@@ -3,7 +3,7 @@
   "description": "City bus tracking system",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve"
   },
