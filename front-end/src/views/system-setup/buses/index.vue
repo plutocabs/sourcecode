@@ -54,7 +54,7 @@
       <v-dialog
         v-model="busDialog"
         persistent
-        max-width="800px"
+        max-width="600px"
       >
         <v-form
           ref="form"
@@ -224,6 +224,7 @@ export default {
         { text: "ID", value: "id", align: "start", filterable: false },
         { text: "License", value: "license" },
         { text: "Capacity", value: "capacity" },
+        { text: "Milage", value: "milage" },
         { text: "Driver", value: "driver" },
         { text: "Created", value: "created_at" },
         { text: "Actions", value: "actions", sortable: false },
@@ -269,6 +270,7 @@ export default {
               id: this.id,
               license: this.license,
               capacity: this.capacity,
+              milage: this.milage
             },
           })
           .then((response) => {
@@ -297,6 +299,7 @@ export default {
     showBusDialog() {
       this.license = '';
       this.capacity = '';
+      this.milage = '';
       this.id = null;
       this.busDialog = true;
     },
@@ -304,6 +307,7 @@ export default {
       this.id = bus.id;
       this.license = bus.license;
       this.capacity = bus.capacity;
+      this.milage = bus.milage;
       this.busDialog = true;
     },
     deleteBus(bus, index) {

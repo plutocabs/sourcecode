@@ -40,6 +40,7 @@ class BusController extends Controller
             'bus.id' => 'integer|nullable',
             'bus.license' => 'required|string',
             'bus.capacity' => 'required|integer',
+            'bus.milage' => 'required|integer'
         ], [], []);
 
         $update = false;

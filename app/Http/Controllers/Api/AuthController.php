@@ -476,6 +476,7 @@ class AuthController extends Controller
         }
         //get user id
         $uid = $verifiedIdToken->claims()->get('sub');
+        Log::info('Extracted UID from token', ['uid' => $uid]);
         return $uid;
     }
     private function newUserData($uid, $request, $role)
