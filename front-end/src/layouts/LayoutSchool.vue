@@ -294,7 +294,7 @@ export default {
         this.secureKey = response.data.secureKey;
         if(this.secureKey == null)
         {
-          this.activationStore.isActivated = false;
+          this.activationStore.isActivated = true;
         }
         else
         {
