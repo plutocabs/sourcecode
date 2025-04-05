@@ -54,7 +54,7 @@
       <v-dialog
         v-model="busDialog"
         persistent
-        max-width="600px"
+        max-width="650px"
       >
         <v-form
           ref="form"
